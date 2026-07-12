@@ -1,0 +1,30 @@
+symbol,resolved_systematic_id,resolved_entrez,gene_name,source_go_terms,module,submodule,shared_with_bulk_autophagy,notes
+LGALS3,ENSG00000131981,3958,galectin 3,GO:0016020,degradation,galectin_selective,False,galectin-3; lysosomal-damage sensor; SELECTIVE lysophagy
+LGALS8,ENSG00000116977,3964,galectin 8,GO:0016020,degradation,galectin_selective,False,galectin-8; lysosomal-damage sensor -> autophagy; SELECTIVE
+LGALS9,ENSG00000168961,3965,galectin 9,GO:0005576;GO:0005576;GO:0005634,degradation,galectin_selective,False,galectin-9; lysosomal-damage sensor; SELECTIVE
+TRIM16,ENSG00000221926,10626,tripartite motif containing 16,GO:0005737;GO:0005737;GO:0005737,degradation,lysophagy_selective_machinery,False,assembles with galectin-3 for lysophagy; SELECTIVE
+UBE2QL1,ENSG00000215218,134111,ubiquitin conjugating enzyme E2 QL1,GO:0005634;GO:0005634;GO:0005634,degradation,lysophagy_selective_machinery,False,E2 driving K48 ubiquitylation of damaged lysosome; SELECTIVE lysophagy
+FBXO27,ENSG00000161243,126433,F-box protein 27,GO:0005737;GO:0005737;GO:0005829,degradation,lysophagy_selective_machinery,False,SCF-FBXO27 ubiquitylates lysosomal glycoproteins; SELECTIVE lysophagy
+SQSTM1,ENSG00000161011,8878,sequestosome 1,GO:0005764,degradation,general_receptor_shared,True,p62; shared selective-autophagy adaptor - NOT lysosome-selective
+CALCOCO2,ENSG00000136436,10241,calcium binding and coiled-coil domain 2,GO:0016020,degradation,general_receptor_shared,True,NDP52; general autophagy receptor - shared
+OPTN,ENSG00000123240,10133,optineurin,GO:0000139;GO:0005634;GO:0005654,degradation,general_receptor_shared,True,optineurin; general receptor - shared
+TAX1BP1,ENSG00000106052,8887,Tax1 binding protein 1,GO:0000407;GO:0000407;GO:0005737,degradation,general_receptor_shared,True,general autophagy receptor - shared
+NBR1,ENSG00000188554,4077,NBR1 autophagy cargo receptor,GO:0005764;GO:0016020,degradation,general_receptor_shared,True,general autophagy receptor - shared
+ULK1,ENSG00000177169,8408,unc-51 like autophagy activating kinase 1,GO:0000407;GO:0000407;GO:0000407,degradation,core_autophagy_shared,True,
+ATG13,ENSG00000175224,9776,autophagy related 13,GO:0000407;GO:0000407;GO:0000407,degradation,core_autophagy_shared,True,
+RB1CC1,ENSG00000023287,9821,RB1 inducible coiled-coil 1,GO:0005764,degradation,core_autophagy_shared,True,
+ATG101,ENSG00000123395,60673,autophagy related 101,GO:0000407;GO:0000407;GO:0000407,degradation,core_autophagy_shared,True,
+BECN1,ENSG00000126581,8678,beclin 1,GO:0000407;GO:0005634;GO:0005634,degradation,core_autophagy_shared,True,
+ATG14,ENSG00000126775,22863,autophagy related 14,GO:0000407;GO:0000421;GO:0005737,degradation,core_autophagy_shared,True,
+ATG5,ENSG00000057663,9474,autophagy related 5,GO:0016020,degradation,core_autophagy_shared,True,
+ATG7,ENSG00000197548,10533,autophagy related 7,GO:0000407;GO:0000407;GO:0000407,degradation,core_autophagy_shared,True,
+ATG12,ENSG00000145782,9140,autophagy related 12,GO:0016020,degradation,core_autophagy_shared,True,
+ATG16L1,ENSG00000281089,55054,autophagy related 16 like 1,GO:0005765,degradation,core_autophagy_shared,True,
+ATG3,ENSG00000144848,64422,autophagy related 3,GO:0000407;GO:0005737;GO:0005737,degradation,core_autophagy_shared,True,
+ATG10,ENSG00000152348,83734,autophagy related 10,GO:0005737;GO:0005829;GO:0005829,degradation,core_autophagy_shared,True,
+MAP1LC3B,ENSG00000140941,81631,microtubule associated protein 1 light chain 3 beta,GO:0016020,degradation,core_autophagy_shared,True,
+GABARAP,ENSG00000170296,11337,GABA type A receptor-associated protein,GO:0005764,degradation,core_autophagy_shared,True,
+GABARAPL1,ENSG00000139112,23710,GABA type A receptor associated protein like 1,GO:0000421;GO:0000421;GO:0005739,degradation,core_autophagy_shared,True,
+GABARAPL2,ENSG00000034713,11345,GABA type A receptor associated protein like 2,GO:0000139;GO:0000139;GO:0000139,degradation,core_autophagy_shared,True,
+WIPI2,ENSG00000157954,26100,"WD repeat domain, phosphoinositide interacting 2",GO:0016020,degradation,core_autophagy_shared,True,
+VCP,ENSG00000165280,7415,valosin containing protein,GO:0000153;GO:0000502;GO:0005576,degradation,core_autophagy_shared,True,p97; extracts ubiquitylated substrates; shared with bulk/ERAD

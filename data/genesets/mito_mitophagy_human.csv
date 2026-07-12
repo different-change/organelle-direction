@@ -1,0 +1,21 @@
+symbol,resolved_systematic_id,uniprot_id,gene_name,source_go_terms,module,submodule,shared_with_bulk_autophagy,notes
+PINK1,ENSG00000158828,Q9BXM7,PTEN induced kinase 1,GO:0000422;GO:0000423,degradation,receptor_selective,False,
+PRKN,ENSG00000185345,O60260,parkin RBR E3 ubiquitin protein ligase,GO:0000422;GO:0000423,degradation,receptor_selective,False,PARK2 = old symbol; selective mitophagy E3 ligase
+BNIP3L,ENSG00000104765,O60238,BCL2 interacting protein 3 like,,degradation,receptor_selective,False,NIX; selective mitophagy receptor
+BNIP3,ENSG00000176171,Q12983,BCL2 interacting protein 3,GO:0000422;GO:0000423,degradation,receptor_selective,False,
+FUNDC1,ENSG00000069509,Q8IVP5,FUN14 domain containing 1,GO:0000422;GO:0000423,degradation,receptor_selective,False,
+FIS1,ENSG00000214253,Q9Y3D6,"fission, mitochondrial 1",,degradation,pink1_parkin_machinery,False,fission/PINK1-Parkin machinery component
+OPTN,ENSG00000123240,Q96CV9,optineurin,,degradation,general_autophagy_receptor,True,general autophagy receptor - NOT mito-selective; shared with bulk autophagy
+CALCOCO2,ENSG00000136436,Q13137,calcium binding and coiled-coil domain 2,,degradation,general_autophagy_receptor,True,NDP52 alias; GENERAL autophagy receptor (xenophagy/aggrephagy) - NOT mito-selective
+ULK1,ENSG00000177169,O75385,unc-51 like autophagy activating kinase 1,GO:0000045;GO:0000423;GO:0006914,degradation,core_autophagy_shared,True,
+ATG13,ENSG00000175224,O75143,autophagy related 13,GO:0000045;GO:0000423;GO:0006914;GO:0098780,degradation,core_autophagy_shared,True,
+ATG101,ENSG00000123395,Q9BSB4,autophagy related 101,GO:0000045;GO:0006914,degradation,core_autophagy_shared,True,
+RB1CC1,ENSG00000023287,Q8TDY2,RB1 inducible coiled-coil 1,GO:0000045;GO:0000422;GO:0006914,degradation,core_autophagy_shared,True,
+BECN1,ENSG00000126581,Q14457,beclin 1,GO:0000045;GO:0000423;GO:0006914;GO:0098780,degradation,core_autophagy_shared,True,
+ATG5,ENSG00000057663,Q9H1Y0,autophagy related 5,GO:0000045;GO:0000423;GO:0006914,degradation,core_autophagy_shared,True,
+ATG7,ENSG00000197548,O95352,autophagy related 7,GO:0000045;GO:0000423;GO:0006914,degradation,core_autophagy_shared,True,
+ATG12,ENSG00000145782,O94817,autophagy related 12,GO:0000045;GO:0000422;GO:0006914,degradation,core_autophagy_shared,True,
+MAP1LC3B,ENSG00000140941,Q9GZQ8,microtubule associated protein 1 light chain 3 beta,GO:0000045;GO:0000422;GO:0000423;GO:0006914,degradation,core_autophagy_shared,True,
+WIPI2,ENSG00000157954,Q9Y4P8,"WD repeat domain, phosphoinositide interacting 2",GO:0000045;GO:0000422,degradation,core_autophagy_shared,True,
+SQSTM1,ENSG00000161011,Q13501,sequestosome 1,GO:0000422;GO:0000423;GO:0006914;GO:0098780,degradation,core_autophagy_shared,True,p62; shared selective-autophagy adaptor
+AMBRA1,ENSG00000110497,Q9C0C7,autophagy and beclin 1 regulator 1,GO:0000045;GO:0000423;GO:0006914;GO:0098780,degradation,shared_regulator,True,shared autophagy regulator; flagged shared

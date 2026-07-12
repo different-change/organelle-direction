@@ -1,0 +1,38 @@
+symbol,resolved_systematic_id,uniprot_id,source_go_terms,module,submodule,shared_with_bulk_autophagy,notes
+TOC159,AT4G02510,O81283,GO:0009707;GO:0009941;GO:0045036;GO:0045037,biogenesis,toc_import,False,TOC159: major import receptor GTPase (preprotein-selective).
+TOC132,AT2G16640,Q9SLF3,GO:0009707;GO:0045036;GO:0045037,biogenesis,toc_import,False,TOC132 / AT3G16620 TOC120 / AT5G20300 TOC90: TOC159 receptor family members.
+TOC120,AT3G16620,Q9LUS2,GO:0009707;GO:0045036;GO:0045037,biogenesis,toc_import,False,
+TOC90,AT5G20300,Q6S5G3,GO:0009707;GO:0045036;GO:0045037,biogenesis,toc_import,False,
+TOC75-III,AT3G46740,Q9STE8,GO:0045037,biogenesis,toc_import,False,TOC75-III: main protein-conducting Omp85 channel of the outer envelope. Symbol alias 'TOC75' collides with OEP80/AT5G19620 (a different beta-barrel); resolved to AT3G46740.
+TOC34,AT5G05000,Q38906,GO:0009707;GO:0009941;GO:0045036,biogenesis,toc_import,False,TOC34: outer-envelope import receptor GTPase (paralog of TOC33).
+TOC33,AT1G02280,O23680,GO:0009707;GO:0009941;GO:0045036,biogenesis,toc_import,False,TOC33: outer-envelope import receptor GTPase. Alias 'PPI1' collides with 'proton pump interactor 1' AT4G27500; resolved to AT1G02280.
+TIC110,AT1G06950,Q8LPR9,GO:0009658;GO:0009706;GO:0009941;GO:0045037,biogenesis,tic_import,False,
+TIC40,AT5G16620,Q9FMD5,GO:0009535;GO:0009658;GO:0009706;GO:0009941;GO:0045037,biogenesis,tic_import,False,
+TIC20-I,AT1G04940,Q8GZ79,GO:0009706;GO:0045037,biogenesis,tic_import,False,
+TIC21,AT2G15290,Q9SHU7,GO:0009706;GO:0009941;GO:0045037,biogenesis,tic_import,False,
+TIC22-IV,AT4G33350,Q9SZB2,GO:0009941,biogenesis,tic_import,False,
+TIC56,AT5G01590,Q7Y1W1,GO:0009706;GO:0009941;GO:0045037,biogenesis,tic_import,False,TIC56: 1MDa TIC complex subunit (nuclear-encoded).
+TIC100,AT5G22640,Q8LPR8,GO:0009535;GO:0009658;GO:0009706;GO:0009941;GO:0045037,biogenesis,tic_import,False,TIC100: inner-membrane 1MDa TIC complex. NOTE: distinct from EMB2794/AT2G02150 (a mygene 'TIC100' collision that was dropped).
+HCF101,AT3G24430,Q6STH5,GO:0016226,biogenesis,photo_assembly,False,
+HCF136,AT5G23120,O82660,GO:0009534;GO:0009535;GO:0009657;GO:0009941;GO:0010207;GO:0031977,biogenesis,photo_assembly,False,
+HCF173,AT1G16720,Q8W4D6,GO:0009535;GO:0009941;GO:0010207,biogenesis,photo_assembly,False,
+HCF244,AT4G35250,O65502,GO:0009534;GO:0009535;GO:0010207,biogenesis,photo_assembly,False,
+ALB3,AT2G28800,Q8LBP4,GO:0009534;GO:0009535;GO:0010027,biogenesis,photo_assembly,False,
+PAM68,AT4G19100,O49668,GO:0009535;GO:0010207,biogenesis,photo_assembly,False,
+LPA1,AT1G02910,Q9SRY4,GO:0009535,biogenesis,photo_assembly,False,
+CPN60A,AT2G28000,P21238,GO:0006457;GO:0009658;GO:0009941,biogenesis,photo_assembly,False,
+CPN60B,AT1G55490,P21240,GO:0006457;GO:0009941,biogenesis,photo_assembly,False,
+LHCB1.3,AT1G29930,P04778,GO:0009534;GO:0009535,biogenesis,photo_marker,False,LHCB1.3 (CAB1): LHCII apoprotein — photosynthesis proliferation marker.
+LHCB2.1,AT2G05100,Q9SHR7,GO:0009535;GO:0009941,biogenesis,photo_marker,False,LHCB2.1: LHCII apoprotein — proliferation marker.
+RBCS1A,AT1G67090,P10795,GO:0009535;GO:0009941;GO:0031977,biogenesis,photo_marker,False,RBCS1A: Rubisco small subunit — nuclear-encoded photosynthesis proliferation marker (not import/division machinery).
+RBCS2B,AT5G38420,P10797,GO:0009941,biogenesis,photo_marker,False,RBCS2B: Rubisco small subunit — proliferation marker.
+FTSZ1-1,AT5G55280,Q42545,GO:0009535;GO:0009658;GO:0010020;GO:0043572,biogenesis,division,False,
+FTSZ2-1,AT2G36250,O82533,GO:0009534;GO:0009535;GO:0010020,biogenesis,division,False,
+FTSZ2-2,AT3G52750,Q9LXJ0,GO:0009534;GO:0009535;GO:0009658;GO:0010020,biogenesis,division,False,
+ARC3,AT1G75010,Q6F6B5,GO:0009657;GO:0009707;GO:0010020,biogenesis,division,False,
+ARC5,AT3G19720,Q84N64,GO:0009707;GO:0010020,biogenesis,division,False,ARC5/DRP5B: dynamin-related plastid-division GTPase. CROSS-NOTE: shared with peroxisome division machinery (DRP5B divides both plastids and peroxisomes).
+ARC6,AT5G42480,Q9FIG9,GO:0009658;GO:0009706;GO:0009941;GO:0010020,biogenesis,division,False,
+PDV1,AT5G53280,Q9FK13,GO:0009707;GO:0010020,biogenesis,division,False,
+PDV2,AT2G16070,Q9XII1,GO:0009707;GO:0010020,biogenesis,division,False,
+MIND1,AT5G24020,Q9MBA2,GO:0009706;GO:0009941;GO:0010020,biogenesis,division,False,
+MINE1,AT1G69390,Q9C4Z7,GO:0009706;GO:0010020,biogenesis,division,False,

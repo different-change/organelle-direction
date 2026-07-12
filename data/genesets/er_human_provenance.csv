@@ -1,0 +1,5 @@
+dataset,cell_line,organism,platform,stimulus,arm,n_vehicle,n_treated,design,matrix,expected_dir,role
+GSE296996,HepG2,Homo sapiens,RNA-seq (Illumina),tunicamycin,biogenesis,5,5,5 replicate experiments on separate days (paired by day),GSE296996_count_matrix.txt.gz (ENSG counts),biogenesis UP / net_direction UP,biogenesis positive control (primary)
+GSE129757,LN308,Homo sapiens,RNA-seq (NextSeq 500),tunicamycin (6h),biogenesis,3,3,"untreated vs 6h tunicamycin, R1-R3",per-sample htseq counts (ENSG),biogenesis UP / net_direction UP,"biogenesis positive control (replication, 2nd cell line)"
+GSE107600,HAP1,Homo sapiens,RNA-seq,amino-acid+serum starvation (6h EBSS),clearance,3,3,WT untreated vs 6h EBSS (ATG7KO/FIP200KO arms available as mechanistic controls),per-sample htseq counts (ENSG),selective_degradation UP / net_direction DOWN,ER-phagy positive control (primary)
+GSE211066,HeLa,Homo sapiens,RNA-seq,nutrient starvation,clearance,6,6,"nutrient-rich vs starved, 2 batches x 3 reps (paired by batch)",GSE211066_Autophagy_RNA-seq_counts.txt.gz (ENSG),selective_degradation UP / net_direction DOWN,"ER-phagy positive control (replication, 2nd cell line)"

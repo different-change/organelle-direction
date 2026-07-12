@@ -1,0 +1,594 @@
+{
+ "vertical": "chloroplast",
+ "crop_species": "Oryza sativa (rice); Ensembl Plants namespace = RAP-DB (Os#g#######); IRGSP-1.0 assembly",
+ "reference_organism": "Arabidopsis thaliana (chloroplast biology reference); ortholog_of = AGI (AT#G#####)",
+ "orthology_method": "Ensembl Plants Compara (host.mcp genomes ensembl_homology, gene_id=AGI, target_species=oryza_sativa). Confidence: high=ortholog_one2one, medium=one2many/many2many.",
+ "id_resolution": {
+  "arabidopsis_symbol_to_AGI": "host.mcp genes-ontologies query_genes (mygene, species taxid 3702)",
+  "AGI_to_rice_RAP": "host.mcp genomes ensembl_homology (Ensembl Plants Compara)",
+  "rice_RAP_to_Entrez": "host.mcp genomes ensembl_xrefs (external_db=EntrezGene) - bridge for expression-matrix ID mapping"
+ },
+ "GO_seed_terms": {
+  "import": "GO:0045037 (protein import into chloroplast stroma)",
+  "division": "GO:0010020 (chloroplast fission)",
+  "thylakoid_assembly": "GO:0010207 (photosystem II assembly)",
+  "chlorophyll": "GO:0015995 (chlorophyll biosynthetic process)",
+  "degradation": "GO:0006914 (autophagy)"
+ },
+ "biogenesis_module": {
+  "n_rice_loci": 31,
+  "submodules": {
+   "thylakoid_assembly": 8,
+   "import": 9,
+   "chlorophyll": 6,
+   "division": 8
+  }
+ },
+ "degradation_module": {
+  "n_rice_loci": 17,
+  "n_selective": 0,
+  "selective_arm_status": "EMPTY - tiered. Plants have NO chloroplast-selective autophagy receptor analogous to yeast Atg32(mito)/Atg36(peroxisome). Chlorophagy (Rubisco-containing body / whole-chloroplast pathways) proceeds through core ATG8 machinery without a dedicated organelle receptor. This is a biological limit (same pattern as Arabidopsis peroxisome ATG36 absence), not a scorer defect."
+ },
+ "dropped_genes": {
+  "lineage_specific_regulators_and_ambiguous": {
+   "TIC56 (AT5G01590)": "1-MDa TIC complex component; mis-annotated in mygene (ATXR3-like); plant-lineage 1-MDa TIC not conserved as generic import machinery - dropped",
+   "TIC100 (AT5G22640)": "1-MDa TIC complex (emb1211/MORN-repeat); plant-specific complex - dropped",
+   "TIC55/TIC62": "peripheral redox-regulatory TIC subunits, not core translocation - dropped to keep conserved machinery",
+   "SULA/GC1 (AT2G21280)": "FtsZ-ring regulator; ambiguous symbol (GC1 collides with golgin/guanylyl-cyclase) - dropped",
+   "CAO(chlorophyllide oxidase collision)": "symbol CAO resolves to AT2G47450=cpSRP43(CAO); the chlorophyll-b oxidase CH1 (AT1G44446) dropped to avoid collision; cpSRP43 kept in thylakoid_assembly"
+  },
+  "conserved_but_no_japonica_compara_ortholog": {
+   "TIC110 (AT1G06950)": "present in Compara trees for wild/indica Oryza but oryza_sativa(japonica) branch split out; indica->japonica bridge empty - dropped (documented Compara artifact, not true gene absence)",
+   "TIC20-I (AT1G04940)": "japonica absent in Compara; partially represented by mapped TIC21/PIC1(Os06g0638100) - dropped",
+   "MINE1 (AT1G69390)": "japonica absent in Compara - dropped (MinD/ARC11 division retained)",
+   "PDV2 (AT2G16070)": "japonica absent in Compara - dropped (PDV1 retained)",
+   "MCD1 (AT1G20830)": "japonica absent in Compara - dropped",
+   "CHLI1 (AT4G18480)": "Mg-chelatase I subunit; japonica absent in Compara & CHLI2 paralog also absent; pathway represented by mapped CHLH(GUN5) and CHLM - dropped"
+  }
+ },
+ "recovered_via_paralog_family": {
+  "ARC6": "AT5G42480 japonica absent; mapped via PARC6 paralog AT3G19180 -> Os04g0675800 (one2one)",
+  "ATG18": "ATG18A(AT3G62770) japonica absent; mapped via ATG18B(AT4G30510)->Os02g0791800 and ATG18G(AT1G03380)->Os05g0405900"
+ },
+ "unresolved_by_orthology": {
+  "ATG8": "ubiquitin-like ATG8 family expansion fragments Compara gene-trees; no clean AGI->oryza_sativa call for ATG8A/E/H/I. ATG8 is the central chlorophagy/RCB marker - its absence from the orthology-derived degradation module is a mapping limitation, noted; core conjugation (ATG3/5/7/10/12), initiation (ATG1/13), PI3K (ATG6/VPS34/ATG18), ATG9 and scaffold ATG11 ARE captured.",
+  "ATG10": "AT3G07525 japonica absent in Compara - dropped"
+ },
+ "collision_checks_performed": [
+  "FTSZ1 symbol not in mygene -> resolved AT5G55280 (FTSZ1-1) by reverse ensembl.gene lookup, confirmed 'FtsZ homolog Z-ring'; rice Os04g0665400 xref-confirmed 'cell division protein FtsZ homolog 1, chloroplastic'",
+  "MIND1 not found -> ARC11 alias -> AT5G24020 (MIND)",
+  "GC1 3-way collision resolved (dropped)",
+  "CAO collision cpSRP43 vs chlorophyllide-oxidase resolved"
+ ],
+ "ortholog_mapping_table": [
+  {
+   "module": "biogenesis",
+   "submodule": "thylakoid_assembly",
+   "arabidopsis_agi": "AT2G28800",
+   "arabidopsis_symbol": "ALB3",
+   "rice_rap_locus": "Os01g0151200",
+   "rice_entrez": "4324524",
+   "ortholog_type": "one2one",
+   "confidence": "high",
+   "notes": ""
+  },
+  {
+   "module": "biogenesis",
+   "submodule": "import",
+   "arabidopsis_agi": "AT4G02510",
+   "arabidopsis_symbol": "TOC159",
+   "rice_rap_locus": "Os01g0356800",
+   "rice_entrez": "4326289",
+   "ortholog_type": "one2many",
+   "confidence": "medium",
+   "notes": ""
+  },
+  {
+   "module": "biogenesis",
+   "submodule": "thylakoid_assembly",
+   "arabidopsis_agi": "AT1G65260",
+   "arabidopsis_symbol": "VIPP1",
+   "rice_rap_locus": "Os01g0895100",
+   "rice_entrez": "4324967",
+   "ortholog_type": "one2one",
+   "confidence": "high",
+   "notes": ""
+  },
+  {
+   "module": "biogenesis",
+   "submodule": "thylakoid_assembly",
+   "arabidopsis_agi": "AT2G45770",
+   "arabidopsis_symbol": "CPFTSY",
+   "rice_rap_locus": "Os01g0958100",
+   "rice_entrez": "4325387",
+   "ortholog_type": "one2one",
+   "confidence": "high",
+   "notes": ""
+  },
+  {
+   "module": "biogenesis",
+   "submodule": "division",
+   "arabidopsis_agi": "AT5G53280",
+   "arabidopsis_symbol": "PDV1",
+   "rice_rap_locus": "Os02g0264300",
+   "rice_entrez": "4328948",
+   "ortholog_type": "one2one",
+   "confidence": "high",
+   "notes": ""
+  },
+  {
+   "module": "biogenesis",
+   "submodule": "thylakoid_assembly",
+   "arabidopsis_agi": "AT2G47450",
+   "arabidopsis_symbol": "CPSRP43",
+   "rice_rap_locus": "Os03g0131900",
+   "rice_entrez": "4331514",
+   "ortholog_type": "one2one",
+   "confidence": "high",
+   "notes": ""
+  },
+  {
+   "module": "biogenesis",
+   "submodule": "import",
+   "arabidopsis_agi": "AT1G02280/AT5G05000",
+   "arabidopsis_symbol": "TOC33/TOC34",
+   "rice_rap_locus": "Os03g0240500",
+   "rice_entrez": "4332203",
+   "ortholog_type": "one2many",
+   "confidence": "medium",
+   "notes": ""
+  },
+  {
+   "module": "biogenesis",
+   "submodule": "import",
+   "arabidopsis_agi": "AT3G46740",
+   "arabidopsis_symbol": "TOC75-III",
+   "rice_rap_locus": "Os03g0271200",
+   "rice_entrez": "4332389",
+   "ortholog_type": "many2many",
+   "confidence": "medium",
+   "notes": ""
+  },
+  {
+   "module": "biogenesis",
+   "submodule": "chlorophyll",
+   "arabidopsis_agi": "AT5G13630",
+   "arabidopsis_symbol": "GUN5/CHLH",
+   "rice_rap_locus": "Os03g0323200",
+   "rice_entrez": "4332690",
+   "ortholog_type": "one2many",
+   "confidence": "medium",
+   "notes": ""
+  },
+  {
+   "module": "biogenesis",
+   "submodule": "division",
+   "arabidopsis_agi": "AT2G36250/AT3G52750",
+   "arabidopsis_symbol": "FTSZ2-1/FTSZ2-2",
+   "rice_rap_locus": "Os03g0646100",
+   "rice_entrez": "4333567",
+   "ortholog_type": "many2many",
+   "confidence": "medium",
+   "notes": ""
+  },
+  {
+   "module": "biogenesis",
+   "submodule": "import",
+   "arabidopsis_agi": "AT4G02510",
+   "arabidopsis_symbol": "TOC159",
+   "rice_rap_locus": "Os03g0835100",
+   "rice_entrez": "4334695",
+   "ortholog_type": "one2many",
+   "confidence": "medium",
+   "notes": ""
+  },
+  {
+   "module": "biogenesis",
+   "submodule": "import",
+   "arabidopsis_agi": "AT5G16620",
+   "arabidopsis_symbol": "TIC40",
+   "rice_rap_locus": "Os04g0439900",
+   "rice_entrez": "4335926",
+   "ortholog_type": "one2one",
+   "confidence": "high",
+   "notes": ""
+  },
+  {
+   "module": "biogenesis",
+   "submodule": "division",
+   "arabidopsis_agi": "AT5G55280",
+   "arabidopsis_symbol": "FTSZ1",
+   "rice_rap_locus": "Os04g0665400",
+   "rice_entrez": "4337316",
+   "ortholog_type": "one2one",
+   "confidence": "high",
+   "notes": ""
+  },
+  {
+   "module": "biogenesis",
+   "submodule": "division",
+   "arabidopsis_agi": "AT3G19180",
+   "arabidopsis_symbol": "ARC6",
+   "rice_rap_locus": "Os04g0675800",
+   "rice_entrez": null,
+   "ortholog_type": "one2one",
+   "confidence": "high",
+   "notes": "AT5G42480(ARC6) japonica absent in Compara; mapped via PARC6 paralog family (AT3G19180)"
+  },
+  {
+   "module": "biogenesis",
+   "submodule": "chlorophyll",
+   "arabidopsis_agi": "AT4G27440",
+   "arabidopsis_symbol": "PORB",
+   "rice_rap_locus": "Os04g0678700",
+   "rice_entrez": "4337415",
+   "ortholog_type": "many2many",
+   "confidence": "medium",
+   "notes": ""
+  },
+  {
+   "module": "biogenesis",
+   "submodule": "import",
+   "arabidopsis_agi": "AT4G02510",
+   "arabidopsis_symbol": "TOC159",
+   "rice_rap_locus": "Os05g0151400",
+   "rice_entrez": "4337834",
+   "ortholog_type": "one2many",
+   "confidence": "medium",
+   "notes": ""
+  },
+  {
+   "module": "biogenesis",
+   "submodule": "division",
+   "arabidopsis_agi": "AT2G36250/AT3G52750",
+   "arabidopsis_symbol": "FTSZ2-1/FTSZ2-2",
+   "rice_rap_locus": "Os05g0443800",
+   "rice_entrez": "4338932",
+   "ortholog_type": "many2many",
+   "confidence": "medium",
+   "notes": ""
+  },
+  {
+   "module": "biogenesis",
+   "submodule": "division",
+   "arabidopsis_agi": "AT5G24020",
+   "arabidopsis_symbol": "MIND/ARC11",
+   "rice_rap_locus": "Os06g0106000",
+   "rice_entrez": "4339865",
+   "ortholog_type": "one2one",
+   "confidence": "high",
+   "notes": ""
+  },
+  {
+   "module": "biogenesis",
+   "submodule": "chlorophyll",
+   "arabidopsis_agi": "AT4G25080",
+   "arabidopsis_symbol": "CHLM",
+   "rice_rap_locus": "Os06g0132400",
+   "rice_entrez": null,
+   "ortholog_type": "one2one",
+   "confidence": "high",
+   "notes": ""
+  },
+  {
+   "module": "biogenesis",
+   "submodule": "import",
+   "arabidopsis_agi": "AT2G15290",
+   "arabidopsis_symbol": "TIC21/PIC1",
+   "rice_rap_locus": "Os06g0638100",
+   "rice_entrez": "4341611",
+   "ortholog_type": "one2one",
+   "confidence": "high",
+   "notes": ""
+  },
+  {
+   "module": "biogenesis",
+   "submodule": "thylakoid_assembly",
+   "arabidopsis_agi": "AT5G23120",
+   "arabidopsis_symbol": "HCF136",
+   "rice_rap_locus": "Os06g0729500",
+   "rice_entrez": "4342140",
+   "ortholog_type": "one2many",
+   "confidence": "medium",
+   "notes": ""
+  },
+  {
+   "module": "biogenesis",
+   "submodule": "thylakoid_assembly",
+   "arabidopsis_agi": "AT5G23120",
+   "arabidopsis_symbol": "HCF136",
+   "rice_rap_locus": "Os06g0729650",
+   "rice_entrez": "107275792",
+   "ortholog_type": "one2many",
+   "confidence": "medium",
+   "notes": ""
+  },
+  {
+   "module": "biogenesis",
+   "submodule": "chlorophyll",
+   "arabidopsis_agi": "AT5G13630",
+   "arabidopsis_symbol": "GUN5/CHLH",
+   "rice_rap_locus": "Os07g0656500",
+   "rice_entrez": null,
+   "ortholog_type": "one2many",
+   "confidence": "medium",
+   "notes": ""
+  },
+  {
+   "module": "biogenesis",
+   "submodule": "division",
+   "arabidopsis_agi": "AT1G75010",
+   "arabidopsis_symbol": "ARC3",
+   "rice_rap_locus": "Os09g0555600",
+   "rice_entrez": "4347814",
+   "ortholog_type": "one2one",
+   "confidence": "high",
+   "notes": ""
+  },
+  {
+   "module": "biogenesis",
+   "submodule": "chlorophyll",
+   "arabidopsis_agi": "AT4G27440",
+   "arabidopsis_symbol": "PORB",
+   "rice_rap_locus": "Os10g0496900",
+   "rice_entrez": "4349004",
+   "ortholog_type": "many2many",
+   "confidence": "medium",
+   "notes": ""
+  },
+  {
+   "module": "biogenesis",
+   "submodule": "chlorophyll",
+   "arabidopsis_agi": "AT1G58290",
+   "arabidopsis_symbol": "HEMA1",
+   "rice_rap_locus": "Os10g0502400",
+   "rice_entrez": "4349044",
+   "ortholog_type": "one2many",
+   "confidence": "medium",
+   "notes": ""
+  },
+  {
+   "module": "biogenesis",
+   "submodule": "import",
+   "arabidopsis_agi": "AT2G16640",
+   "arabidopsis_symbol": "TOC132",
+   "rice_rap_locus": "Os10g0548800",
+   "rice_entrez": "4349303",
+   "ortholog_type": "one2many",
+   "confidence": "medium",
+   "notes": ""
+  },
+  {
+   "module": "biogenesis",
+   "submodule": "import",
+   "arabidopsis_agi": "AT3G46740",
+   "arabidopsis_symbol": "TOC75-III",
+   "rice_rap_locus": "Os11g0116500",
+   "rice_entrez": null,
+   "ortholog_type": "many2many",
+   "confidence": "medium",
+   "notes": ""
+  },
+  {
+   "module": "biogenesis",
+   "submodule": "thylakoid_assembly",
+   "arabidopsis_agi": "AT5G03940",
+   "arabidopsis_symbol": "CPSRP54",
+   "rice_rap_locus": "Os11g0153600",
+   "rice_entrez": "9267495",
+   "ortholog_type": "one2many",
+   "confidence": "medium",
+   "notes": ""
+  },
+  {
+   "module": "biogenesis",
+   "submodule": "thylakoid_assembly",
+   "arabidopsis_agi": "AT5G03940",
+   "arabidopsis_symbol": "CPSRP54",
+   "rice_rap_locus": "Os11g0153700",
+   "rice_entrez": "4349809",
+   "ortholog_type": "one2many",
+   "confidence": "medium",
+   "notes": ""
+  },
+  {
+   "module": "biogenesis",
+   "submodule": "division",
+   "arabidopsis_agi": "AT3G19720",
+   "arabidopsis_symbol": "ARC5/DRP5B",
+   "rice_rap_locus": "Os12g0178700",
+   "rice_entrez": "4351665",
+   "ortholog_type": "one2one",
+   "confidence": "high",
+   "notes": ""
+  },
+  {
+   "module": "degradation",
+   "submodule": "core_autophagy_shared",
+   "arabidopsis_agi": "AT5G61500",
+   "arabidopsis_symbol": "ATG3",
+   "rice_rap_locus": "Os01g0200000",
+   "rice_entrez": "4327346",
+   "ortholog_type": "one2many",
+   "confidence": "medium",
+   "notes": ""
+  },
+  {
+   "module": "degradation",
+   "submodule": "core_autophagy_shared",
+   "arabidopsis_agi": "AT5G45900",
+   "arabidopsis_symbol": "ATG7",
+   "rice_rap_locus": "Os01g0614900",
+   "rice_entrez": "4326644",
+   "ortholog_type": "one2one",
+   "confidence": "high",
+   "notes": ""
+  },
+  {
+   "module": "degradation",
+   "submodule": "core_autophagy_shared",
+   "arabidopsis_agi": "AT3G61710",
+   "arabidopsis_symbol": "ATG6",
+   "rice_rap_locus": "Os01g0681400",
+   "rice_entrez": "4324394",
+   "ortholog_type": "one2many",
+   "confidence": "medium",
+   "notes": ""
+  },
+  {
+   "module": "degradation",
+   "submodule": "core_autophagy_shared",
+   "arabidopsis_agi": "AT5G17290",
+   "arabidopsis_symbol": "ATG5",
+   "rice_rap_locus": "Os02g0117800",
+   "rice_entrez": "4328092",
+   "ortholog_type": "one2one",
+   "confidence": "high",
+   "notes": ""
+  },
+  {
+   "module": "degradation",
+   "submodule": "receptor_scaffold",
+   "arabidopsis_agi": "AT4G30790",
+   "arabidopsis_symbol": "ATG11",
+   "rice_rap_locus": "Os02g0179800",
+   "rice_entrez": "4328503",
+   "ortholog_type": "one2one",
+   "confidence": "high",
+   "notes": ""
+  },
+  {
+   "module": "degradation",
+   "submodule": "core_autophagy_shared",
+   "arabidopsis_agi": "AT4G30510",
+   "arabidopsis_symbol": "ATG18B",
+   "rice_rap_locus": "Os02g0791800",
+   "rice_entrez": "4330978",
+   "ortholog_type": "one2one",
+   "confidence": "high",
+   "notes": "ATG18 family via ATG18B paralog (japonica ATG18A tree split)"
+  },
+  {
+   "module": "degradation",
+   "submodule": "core_autophagy_shared",
+   "arabidopsis_agi": "AT3G61960",
+   "arabidopsis_symbol": "ATG1",
+   "rice_rap_locus": "Os03g0122000",
+   "rice_entrez": "4331441",
+   "ortholog_type": "one2one",
+   "confidence": "high",
+   "notes": ""
+  },
+  {
+   "module": "degradation",
+   "submodule": "core_autophagy_shared",
+   "arabidopsis_agi": "AT2G31260",
+   "arabidopsis_symbol": "ATG9",
+   "rice_rap_locus": "Os03g0248000",
+   "rice_entrez": "4332250",
+   "ortholog_type": "one2many",
+   "confidence": "medium",
+   "notes": ""
+  },
+  {
+   "module": "degradation",
+   "submodule": "core_autophagy_shared",
+   "arabidopsis_agi": "AT3G61710",
+   "arabidopsis_symbol": "ATG6",
+   "rice_rap_locus": "Os03g0258500",
+   "rice_entrez": null,
+   "ortholog_type": "one2many",
+   "confidence": "medium",
+   "notes": ""
+  },
+  {
+   "module": "degradation",
+   "submodule": "core_autophagy_shared",
+   "arabidopsis_agi": "AT3G61710",
+   "arabidopsis_symbol": "ATG6",
+   "rice_rap_locus": "Os03g0644000",
+   "rice_entrez": "4333557",
+   "ortholog_type": "one2many",
+   "confidence": "medium",
+   "notes": ""
+  },
+  {
+   "module": "degradation",
+   "submodule": "core_autophagy_shared",
+   "arabidopsis_agi": "AT3G49590",
+   "arabidopsis_symbol": "ATG13",
+   "rice_rap_locus": "Os04g0538700",
+   "rice_entrez": "4336527",
+   "ortholog_type": "one2one",
+   "confidence": "high",
+   "notes": ""
+  },
+  {
+   "module": "degradation",
+   "submodule": "core_autophagy_shared",
+   "arabidopsis_agi": "AT1G60490",
+   "arabidopsis_symbol": "VPS34",
+   "rice_rap_locus": "Os05g0180600",
+   "rice_entrez": "4337982",
+   "ortholog_type": "one2many",
+   "confidence": "medium",
+   "notes": ""
+  },
+  {
+   "module": "degradation",
+   "submodule": "core_autophagy_shared",
+   "arabidopsis_agi": "AT1G03380",
+   "arabidopsis_symbol": "ATG18G",
+   "rice_rap_locus": "Os05g0405900",
+   "rice_entrez": "4338754",
+   "ortholog_type": "one2many",
+   "confidence": "medium",
+   "notes": "ATG18 family via ATG18G paralog"
+  },
+  {
+   "module": "degradation",
+   "submodule": "core_autophagy_shared",
+   "arabidopsis_agi": "AT1G54210",
+   "arabidopsis_symbol": "ATG12A",
+   "rice_rap_locus": "Os06g0205000",
+   "rice_entrez": "4340429",
+   "ortholog_type": "one2many",
+   "confidence": "medium",
+   "notes": ""
+  },
+  {
+   "module": "degradation",
+   "submodule": "core_autophagy_shared",
+   "arabidopsis_agi": "AT1G60490",
+   "arabidopsis_symbol": "VPS34",
+   "rice_rap_locus": "Os08g0307400",
+   "rice_entrez": "4345232",
+   "ortholog_type": "one2many",
+   "confidence": "medium",
+   "notes": ""
+  },
+  {
+   "module": "degradation",
+   "submodule": "core_autophagy_shared",
+   "arabidopsis_agi": "AT2G31260",
+   "arabidopsis_symbol": "ATG9",
+   "rice_rap_locus": "Os10g0163100",
+   "rice_entrez": "107275726",
+   "ortholog_type": "one2many",
+   "confidence": "medium",
+   "notes": ""
+  },
+  {
+   "module": "degradation",
+   "submodule": "core_autophagy_shared",
+   "arabidopsis_agi": "AT5G61500",
+   "arabidopsis_symbol": "ATG3",
+   "rice_rap_locus": "Os10g0560450",
+   "rice_entrez": null,
+   "ortholog_type": "one2many",
+   "confidence": "medium",
+   "notes": ""
+  }
+ ],
+ "generated": "2026-07-10T18:13:17.944498Z"
+}

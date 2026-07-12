@@ -1,0 +1,103 @@
+{
+ "species": "Homo sapiens (9606)",
+ "module_namespace": "HGNC symbol (resolved_systematic_id = Ensembl ENSG)",
+ "resolver_services": {
+  "gene_identity": "MyGene.info via genes-ontologies.query_genes (scopes=symbol, species=human)",
+  "reactome": "genes-ontologies.map_reactome_pathways",
+  "go_source": "MyGene-embedded GO (BP/CC/MF) filtered to target terms"
+ },
+ "reactome_version": "97",
+ "go_terms_used": {
+  "biogenesis": {
+   "GO:0005739": "mitochondrion",
+   "GO:0007005": "mitochondrion organization",
+   "GO:0007007": "inner mitochondrial membrane organization",
+   "GO:0032981": "mito respiratory chain complex I assembly",
+   "GO:0006390": "mitochondrial transcription",
+   "GO:0042775": "mito ATP synthesis coupled electron transport",
+   "GO:0045039": "protein insertion into mito inner membrane",
+   "GO:0045040": "protein insertion into mito outer membrane",
+   "GO:0033108": "mito respiratory chain complex assembly"
+  },
+  "degradation": {
+   "GO:0000422": "autophagy of mitochondrion (mitophagy)",
+   "GO:0000423": "mitophagy",
+   "GO:0006914": "autophagy",
+   "GO:0000045": "autophagosome assembly",
+   "GO:0098780": "response to mitochondrial depolarisation"
+  },
+  "regulator": {
+   "GO:0006357": "regulation of transcription by RNA pol II",
+   "GO:0003700": "DNA-binding TF activity"
+  },
+  "anabolism_control": {
+   "GO:0042254": "ribosome biogenesis",
+   "GO:0006364": "rRNA processing",
+   "GO:0022613": "ribonucleoprotein complex biogenesis",
+   "GO:0030490": "maturation of SSU-rRNA"
+  }
+ },
+ "reactome_terms_confirmed": {
+  "mitophagy": [
+   "R-HSA-5205647 Mitophagy",
+   "R-HSA-5205685 PINK1-PRKN Mediated Mitophagy",
+   "R-HSA-8934903 Receptor Mediated Mitophagy",
+   "R-HSA-9663891 Selective autophagy"
+  ]
+ },
+ "machinery_vs_regulator_split_rationale": "PRIMARY biogenesis score = MACHINERY ONLY (import TOM/TIM, MICOS, OXPHOS assembly+core structural subunits, mtDNA replication/transcription apparatus). Master transcriptional REGULATORS (PPARGC1A/PGC1a, PPARGC1B, NRF1, TFAM, ESRRA, GABPA, NFE2L2) are held OUT of the primary score and reported SEPARATELY. Rationale: PGC1a induction is the textbook DEFINITION of the exercise biogenesis response; scoring exercise with PGC1a inside the module is near-tautological and inflates the control. Machinery is the genuine independent test; regulators are reported alongside as the expected coactivator signal. Mirrors the project's 'machinery conserves, regulators diverge' principle.",
+ "selective_vs_shared_rationale": "Selective mitophagy sub-score (shared_with_bulk_autophagy=False): PINK1, PRKN, BNIP3L/NIX, BNIP3, FUNDC1, FIS1 - genuine mito-selective receptors/machinery. OPTN and CALCOCO2/NDP52 are flagged shared=True: they are GENERAL autophagy receptors (xenophagy/aggrephagy), NOT mito-selective; including them in the selective arm reintroduces the bulk-autophagy confound. Core ATG machinery (ULK1/ATG13/ATG101/RB1CC1/BECN1/ATG5/ATG7/ATG12/MAP1LC3B/WIPI2/SQSTM1) and AMBRA1 also shared=True.",
+ "collision_flags": {
+  "PRKN": "formerly PARK2 (old symbol) - resolved to current HGNC PRKN",
+  "CALCOCO2": "NDP52 is a common alias - resolved to HGNC CALCOCO2; flagged general (shared) receptor",
+  "BNIP3L": "NIX alias",
+  "IMMT": "MIC60/MICOS60",
+  "MICOS10/MICOS13": "formerly MINOS1/QIL1",
+  "NCL": "MyGene returned uppercase name field; pinned to HGNC NCL / ENSG00000173726",
+  "ATP5F1A": "new HGNC nomenclature (formerly ATP5A1)"
+ },
+ "counts": {
+  "mito_biogenesis_machinery_human.csv": {
+   "n_genes": 83,
+   "submodules": {
+    "import_TIM": 15,
+    "OXPHOS_CIV": 12,
+    "OXPHOS_CI": 11,
+    "OXPHOS_CV": 9,
+    "import_TOM": 8,
+    "OXPHOS_CIII": 8,
+    "MICOS": 7,
+    "mtDNA_replication_transcription": 7,
+    "OXPHOS_CII": 6
+   },
+   "selective_shared_false": null
+  },
+  "mito_regulators_human.csv": {
+   "n_genes": 7,
+   "submodules": {
+    "master_transcriptional": 7
+   },
+   "selective_shared_false": null
+  },
+  "mito_mitophagy_human.csv": {
+   "n_genes": 20,
+   "submodules": {
+    "core_autophagy_shared": 11,
+    "receptor_selective": 5,
+    "general_autophagy_receptor": 2,
+    "pink1_parkin_machinery": 1,
+    "shared_regulator": 1
+   },
+   "selective_shared_false": 6
+  },
+  "ribosome_biogenesis_anabolism_human.csv": {
+   "n_genes": 35,
+   "submodules": {
+    "rrna_processing_ribosome_biogenesis": 27,
+    "ribosomal_protein": 8
+   },
+   "selective_shared_false": null
+  }
+ },
+ "mRNA_proxy_caveat": "Transcript abundance is a proxy. Positive scores are 'consistent with a shift toward biogenesis/clearance', NEVER organelle turnover rates."
+}

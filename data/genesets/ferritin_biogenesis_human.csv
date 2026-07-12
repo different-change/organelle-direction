@@ -1,0 +1,6 @@
+symbol,resolved_systematic_id,uniprot_id,gene_name,source_go_terms,module,submodule,shared_with_bulk_autophagy,notes
+FTH1,ENSG00000167996,P02794,ferritin heavy chain 1,GO:0070288;GO:0140315;GO:0004322,biogenesis,ferritin_complex,False,ferritin heavy chain 1 - ferroxidase; core storage subunit
+FTL,ENSG00000087086,P02792,ferritin light chain,GO:0070288;GO:0005506,biogenesis,ferritin_complex,False,ferritin light chain - iron nucleation; core storage subunit
+FTMT,ENSG00000181867,Q8N4E7,ferritin mitochondrial,GO:0006879;GO:0004322,biogenesis,ferritin_complex,False,mitochondrial ferritin - tissue-restricted (testis/brain/low elsewhere); flagged
+PCBP1,ENSG00000169564,Q15365,poly(rC) binding protein 1,GO:0140315,biogenesis,iron_chaperone,False,poly(rC) binding protein 1 - cytosolic Fe(II) chaperone; delivers iron to ferritin for storage
+PCBP2,ENSG00000197111,Q15366,poly(rC) binding protein 2,,biogenesis,iron_chaperone,False,poly(rC) binding protein 2 - cytosolic Fe(II) chaperone; ferritin loading

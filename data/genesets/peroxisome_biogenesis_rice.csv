@@ -1,0 +1,28 @@
+symbol,resolved_systematic_id,uniprot_id,source_go_terms,module,submodule,shared_with_bulk_autophagy,notes,ortholog_of,ortholog_of_symbol,ortholog_method,ortholog_confidence
+peroxisome biogenesis protein 3-1,Os09g0314300,,,biogenesis,denovo,False,poorly-conserved peroxin; no At-Os Compara call; rice locus by RAP-DB functional name (reciprocal-unverified),YDR329C,PEX3,mygene_rice_named,low
+Os02g0123200,Os02g0123200,,,biogenesis,denovo,False,rice ortholog of At PEX16 (AT2G45690); At-Os ortholog_one2one; yeast seed nan,,,ensembl_compara_AtOs,high
+Os02g0661000,Os02g0661000,,,biogenesis,denovo,False,rice ortholog of At PEX19-1 (AT3G03490); At-Os ortholog_one2many; yeast seed PEX19,YDL065C,PEX19,ensembl_compara_AtOs,medium
+peroxisome biogenesis protein 5,Os08g0500100,,,biogenesis,import,False,rice ortholog of At PEX5 (AT5G56290); At-Os ortholog_one2one; yeast seed PEX5,YDR244W,PEX5,ensembl_compara_AtOs,high
+peroxisome biogenesis protein 7,Os02g0245100,,,biogenesis,import,False,rice ortholog of At PEX7 (AT1G29260); At-Os ortholog_one2one; yeast seed PEX7,YDR142C,PEX7,ensembl_compara_AtOs,high
+uncharacterized LOC124500700,Os03g0786000,,,biogenesis,import,False,rice ortholog of At PEX13 (AT3G07560); At-Os ortholog_one2many; yeast seed PEX13,YLR191W,PEX13,ensembl_compara_AtOs,medium
+peroxisomal membrane protein 13,Os07g0152800,,,biogenesis,import,False,rice ortholog of At PEX13 (AT3G07560); At-Os ortholog_one2many; yeast seed PEX13,YLR191W,PEX13,ensembl_compara_AtOs,medium
+peroxisomal membrane protein PEX14,Os05g0578000,,,biogenesis,import,False,rice ortholog of At PEX14 (AT5G62810); At-Os ortholog_one2one; yeast seed PEX14,YGL153W,PEX14,ensembl_compara_AtOs,high
+peroxisome biogenesis protein 2,Os05g0275700,,,biogenesis,ubiquitination,False,rice ortholog of At PEX2 (AT1G79810); At-Os ortholog_one2one; yeast seed PEX2,YJL210W,PEX2,ensembl_compara_AtOs,high
+peroxisome biogenesis factor 10,Os07g0608800,,,biogenesis,ubiquitination,False,rice ortholog of At PEX10 (AT2G26350); At-Os ortholog_one2one; yeast seed PEX10,YDR265W,PEX10,ensembl_compara_AtOs,high
+peroxisome biogenesis protein 12,Os10g0467200,,,biogenesis,ubiquitination,False,rice ortholog of At PEX12 (AT3G04460); At-Os ortholog_one2one; yeast seed PEX12,YMR026C,PEX12,ensembl_compara_AtOs,high
+protein PEROXIN-4,Os02g0634800,,,biogenesis,ubiquitination,False,rice ortholog of At PEX4 (AT5G25760); At-Os ortholog_one2one; yeast seed PEX4,YGR133W,PEX4,ensembl_compara_AtOs,high
+peroxisome biogenesis protein 22,Os04g0672800,,,biogenesis,ubiquitination,False,poorly-conserved peroxin; no At-Os Compara call; rice locus by RAP-DB functional name (reciprocal-unverified),YAL055W,PEX22,mygene_rice_named,low
+Os08g0556550,Os08g0556550,,,biogenesis,import,False,rice ortholog of At PEX1 (AT5G08470); At-Os ortholog_one2one; yeast seed PEX1,YKL197C,PEX1,ensembl_compara_AtOs,high
+peroxisomal ATPase PEX6,Os04g0617600,,,biogenesis,import,False,rice ortholog of At PEX6 (AT1G03000); At-Os ortholog_one2one; yeast seed PEX6,YNL329C,PEX6,ensembl_compara_AtOs,high
+protein APEM9,Os06g0702800,,,biogenesis,import,False,poorly-conserved peroxin; no At-Os Compara call; rice locus by RAP-DB functional name (reciprocal-unverified),YOL044W,PEX15,mygene_rice_named,low
+peroxisomal membrane protein 11-2,Os03g0301950,,,biogenesis,fission,False,rice ortholog of At PEX11A (AT1G47750); At-Os ortholog_one2many; yeast seed PEX11,YOL147C,PEX11,ensembl_compara_AtOs,medium
+peroxisomal membrane protein 11-3-like,Os03g0302000,,,biogenesis,fission,False,rice ortholog of At PEX11A (AT1G47750); At-Os ortholog_one2many; yeast seed PEX11,YOL147C,PEX11,ensembl_compara_AtOs,medium
+peroxisomal membrane protein 11-4-like,Os04g0534600,,,biogenesis,fission,False,rice ortholog of At PEX11B (AT3G47430); At-Os ortholog_one2one; yeast seed PEX11,YOL147C,PEX11,ensembl_compara_AtOs,high
+peroxisomal membrane protein 11-1-like,Os03g0117100,,,biogenesis,fission,False,rice ortholog of At PEX11C (AT1G01820); At-Os ortholog_many2many; yeast seed PEX11,YOL147C,PEX11,ensembl_compara_AtOs,low
+peroxisomal membrane protein 11-5-like,Os06g0127000,,,biogenesis,fission,False,rice ortholog of At PEX11C (AT1G01820); At-Os ortholog_many2many; yeast seed PEX11,YOL147C,PEX11,ensembl_compara_AtOs,low
+mitochondrial fission 1 protein A,Os01g0951800,,,biogenesis,fission,False,rice ortholog of At FIS1A (AT3G57090); At-Os ortholog_many2many; yeast seed FIS1,YIL065C,FIS1,ensembl_compara_AtOs,low
+mitochondrial fission 1 protein A,Os03g0356484,,,biogenesis,fission,False,rice ortholog of At FIS1A (AT3G57090); At-Os ortholog_many2many; yeast seed FIS1,YIL065C,FIS1,ensembl_compara_AtOs,low
+mitochondrial fission 1 protein A,Os05g0383000,,,biogenesis,fission,False,rice ortholog of At FIS1A (AT3G57090); At-Os ortholog_many2many; yeast seed FIS1,YIL065C,FIS1,ensembl_compara_AtOs,low
+dynamin-related protein 3A,Os01g0920400,,,biogenesis,fission,False,rice ortholog of At DRP3A (AT4G33650); At-Os ortholog_many2many; yeast seed DNM1,YLL001W,DNM1,ensembl_compara_AtOs,low
+dynamin-related protein 3B,Os04g0381000,Q0JDS3,,biogenesis,fission,False,rice ortholog of At DRP3A (AT4G33650); At-Os ortholog_many2many; yeast seed DNM1,YLL001W,DNM1,ensembl_compara_AtOs,low
+dynamin-like protein ARC5,Os12g0178700,,,biogenesis,fission,False,rice ortholog of At DRP5B (AT3G19720); At-Os ortholog_one2one; yeast seed nan,,,ensembl_compara_AtOs,high

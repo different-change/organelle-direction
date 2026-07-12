@@ -1,0 +1,31 @@
+symbol,resolved_systematic_id,uniprot_id,gene_name,source_go_terms,module,submodule,shared_with_bulk_autophagy,notes
+PEX3,YDR329C,P28795,Pex3p,GO:0007031;GO:0032581;GO:0045033;GO:0045046,biogenesis,denovo,False,peroxisomal membrane biogenesis platform; also Atg36 docking site
+PEX19,YDL065C,Q07418,Pex19p,GO:0032581;GO:0045033;GO:0045046,biogenesis,denovo,False,PMP chaperone/receptor for membrane biogenesis
+PEX5,YDR244W,P35056,Pex5p,GO:0016558;GO:0016560,biogenesis,import,False,PTS1 matrix import receptor
+PEX7,YDR142C,P39108,Pex7p,GO:0016558;GO:0016560,biogenesis,import,False,PTS2 matrix import receptor
+PEX18,YHR160C,P38855,Pex18p,GO:0016558,biogenesis,import,False,PTS2 co-receptor (redundant with Pex21)
+PEX21,YGR239C,P50091,Pex21p,GO:0016558,biogenesis,import,False,PTS2 co-receptor (redundant with Pex18)
+PEX9,YMR018W,Q04364,Pex9p,GO:0016560,biogenesis,import,False,oleate-inducible PTS1 co-receptor
+PEX13,YLR191W,P80667,peroxin PEX13,GO:0016560,biogenesis,import,False,docking complex
+PEX14,YGL153W,P53112,Pex14p,GO:0016558;GO:0016560,biogenesis,import,False,docking complex
+PEX17,YNL214W,P40155,Pex17p,GO:0016560,biogenesis,import,False,docking complex
+PEX8,YGR077C,P53248,Pex8p,GO:0016558,biogenesis,import,False,intraperoxisomal; links docking & RING
+PEX2,YJL210W,P32800,ubiquitin-protein ligase peroxin 2,GO:0016558;GO:0016562,biogenesis,ubiquitination,False,RING E3 ligase for importomer/Pex5 ubiquitination
+PEX10,YDR265W,Q05568,ubiquitin-protein ligase peroxin 10,GO:0007031;GO:0016558;GO:0016562,biogenesis,ubiquitination,False,RING E3 ligase
+PEX12,YMR026C,Q04370,ubiquitin-protein ligase peroxin 12,GO:0016562,biogenesis,ubiquitination,False,RING E3 ligase
+PEX4,YGR133W,P29340,E2 ubiquitin-protein ligase peroxin 4,GO:0016562,biogenesis,ubiquitination,False,E2 ubiquitin conjugase (Pex5 recycling)
+PEX22,YAL055W,P39718,ubiquitin-protein transferase activating protein PEX22,GO:0016562,biogenesis,ubiquitination,False,membrane anchor for Pex4
+PEX1,YKL197C,P24004,AAA family ATPase peroxin 1,GO:0016562,biogenesis,import,False,"AAA-ATPase, receptor export/recycling"
+PEX6,YNL329C,P33760,AAA family ATPase peroxin 6,GO:0016562,biogenesis,import,False,"AAA-ATPase, receptor export/recycling"
+PEX15,YOL044W,Q08215,Pex15p,GO:0016562,biogenesis,import,False,membrane anchor for Pex1/Pex6 (functional analog of mammalian PEX26)
+PEX11,YOL147C,Q12462,Pex11p,GO:0016559,biogenesis,fission,False,elongation/proliferation; oleate-induced
+PEX25,YPL112C,Q02969,Pex25p,GO:0016559,biogenesis,fission,False,"Pex11 family, proliferation"
+PEX27,YOR193W,Q08580,Pex27p,GO:0007031;GO:0016559,biogenesis,fission,False,"Pex11 family, proliferation"
+PEX34,YCL056C,P25584,Pex34p,GO:0007031,biogenesis,fission,False,"proliferation, peroxisome number"
+FIS1,YIL065C,P40515,Fis1p,GO:0007031;GO:0016559,biogenesis,fission,False,shared with mitochondrial fission
+DNM1,YLL001W,P54861,dynamin-related GTPase DNM1,GO:0007031;GO:0016559,biogenesis,fission,False,dynamin-related GTPase; shared with mitochondrial fission
+VPS1,YKR001C,P21576,dynamin-like GTPase VPS1,GO:0016559,biogenesis,fission,False,dynamin-related GTPase; peroxisome fission
+MDV1,YJL112W,P47025,Mdv1p,GO:0016559,biogenesis,fission,False,fission adaptor; shared with mitochondrial fission
+CAF4,YKR036C,P36130,Caf4p,GO:0016559,biogenesis,fission,False,fission adaptor; shared with mitochondrial fission
+INP1,YMR204C,Q03694,Inp1p,GO:0045033,biogenesis,inheritance,False,peroxisome retention/inheritance
+INP2,YMR163C,Q03824,Inp2p,GO:0045033,biogenesis,inheritance,False,Myo2 receptor for peroxisome inheritance

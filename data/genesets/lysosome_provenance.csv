@@ -1,0 +1,8 @@
+item,accession,system,assay,matrix,n_samples,role
+dataset_coupling,GSE226743,HeLa (human),RNA-seq,NCBI-recomputed raw counts GRCh38.p13 (Entrez),56,validated coupling vertical; positive controls for BOTH arms + mito
+posctrl_lyso_biogenesis,GSE226743,TFEB-FLAG vs FLAG,RNA-seq,,3v3,TFEB overexpression -> lyso biogenesis UP (Δ net=+0.64 p=0.032; biog Δ=+1.22 p=0.005)
+posctrl_lysophagy,GSE226743,WT LLOMe 0h vs WT ctrl,RNA-seq,,4v4,LLOMe -> lyso net_direction DOWN/clearance (Δ=-0.13 p=0.11); selective galectin arm UP
+posctrl_mitophagy,GSE226743,CCCP/valinomycin vs ctrl,RNA-seq,,3v3,uncouplers; transcriptional mito receptors NOT up (post-translational PINK1 induction; poison rule)
+scorer,score_organelle_dynamics.py,,,"method=zscore, n_perm=2000, within-dataset (all 56 samples)",,reused verbatim from mito/peroxisome anchor
+gene_resolution,MyGene.info via genes-ontologies,Homo sapiens 9606,,scopes=symbol/alias; GO CC from mygene,,"all IDs resolved via MCP; GBA->GBA1, TMEM55B->PIP4P1 aliases"
+independent_validators_not_scored,GSE273702;GSE235340,HeLa Torin1 (3/arm); HeLa LLOMe (3/arm),RNA-seq,no NCBI-recomputed counts (404),,corroborating designs found in scout; counts not on allowlisted host

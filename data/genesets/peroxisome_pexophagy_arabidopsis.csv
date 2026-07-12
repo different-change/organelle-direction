@@ -1,0 +1,18 @@
+symbol,resolved_systematic_id,uniprot_id,source_go_terms,module,submodule,shared_with_bulk_autophagy,ortholog_of,ortholog_of_symbol,ortholog_method,ortholog_confidence,ortholog_evidence,notes
+ATG11,AT4G30790,Q9SUG7,GO:0000425;GO:0006914,pexophagy,receptor,True,YPR049C,ATG11,conserved_family_GO,medium,conserved_family_and_shared_GO_no_compara_call,"selective-autophagy scaffold; conserved (family/GO), no Compara 1:1"
+ATG101,AT5G66930,F4K265,GO:0006914,pexophagy,core_autophagy_shared,True,,,conserved_family_GO,none,no_yeast_ortholog_conserved_machinery,Atg1-complex subunit (metazoan/plant; absent in S.cerevisiae); conserved autophagy machinery
+ATG13,AT3G49590,F4IXZ6,GO:0006914,pexophagy,core_autophagy_shared,True,YPR185W,ATG13,ensembl_compara_pan_homology,medium,ensembl_compara:ortholog_one2many->YPR185W,Atg1 complex; Compara ortholog of ScATG13
+ATG8A,AT4G21980,Q8LEM4,GO:0006914,pexophagy,core_autophagy_shared,True,YBL078C,ATG8,conserved_family_GO,medium,conserved_family_and_shared_GO_no_compara_call,Atg8 family member; conserved (family/GO)
+ATG8E,AT2G45170,Q8S926,GO:0006914,pexophagy,core_autophagy_shared,True,YBL078C,ATG8,ensembl_compara_pan_homology,medium,ensembl_compara:ortholog_one2many->YBL078C,Atg8 family member; Compara ortholog of ScATG8
+ATG7,AT5G45900,Q94CD5,GO:0006914,pexophagy,core_autophagy_shared,True,YHR171W,ATG7,ensembl_compara_pan_homology,high,ensembl_compara:ortholog_one2one->YHR171W,E1 enzyme; Compara 1:1 ortholog of ScATG7
+ATG3,AT5G61500,Q0WWQ1,GO:0006914,pexophagy,core_autophagy_shared,True,YNR007C,ATG3,ensembl_compara_pan_homology,high,ensembl_compara:ortholog_one2one->YNR007C,E2 for Atg8 lipidation; Compara 1:1 ortholog of ScATG3
+ATG5,AT5G17290,Q9FFI2,GO:0006914,pexophagy,core_autophagy_shared,True,YPL149W,ATG5,ensembl_compara_pan_homology,high,ensembl_compara:ortholog_one2one->YPL149W,Atg12 conjugation; Compara 1:1 ortholog of ScATG5
+ATG12A,AT1G54210,Q8S924,GO:0006914,pexophagy,core_autophagy_shared,True,YBR217W,ATG12,ensembl_compara_pan_homology,medium,ensembl_compara:ortholog_one2many->YBR217W,ubiquitin-like; Compara ortholog of ScATG12
+ATG12B,AT3G13970,Q9LVK3,GO:0006914,pexophagy,core_autophagy_shared,True,YBR217W,ATG12,ensembl_compara_pan_homology,medium,ensembl_compara:ortholog_one2many->YBR217W,ubiquitin-like; Compara ortholog of ScATG12
+ATG10,AT3G07525,Q8VZ52,GO:0006914,pexophagy,core_autophagy_shared,True,YLL042C,ATG10,conserved_family_GO,medium,conserved_family_and_shared_GO_no_compara_call,E2 for Atg12 conjugation; conserved (family/GO)
+ATG9,AT2G31260,Q8RUS5,GO:0006914,pexophagy,core_autophagy_shared,True,YDL149W,ATG9,ensembl_compara_pan_homology,high,ensembl_compara:ortholog_one2one->YDL149W,lipid scramblase; Compara 1:1 ortholog of ScATG9
+ATG2,AT3G19190,F8S296,GO:0006914,pexophagy,core_autophagy_shared,True,YNL242W,ATG2,conserved_family_GO,medium,conserved_family_and_shared_GO_no_compara_call,lipid transfer; conserved (family/GO)
+ATG18A,AT3G62770,Q93VB2,GO:0006914,pexophagy,core_autophagy_shared,True,YFR021W,ATG18,conserved_family_GO,medium,conserved_family_and_shared_GO_no_compara_call,PI3P-binding WD40; conserved (family/GO)
+ATG6,AT3G61710,Q9M367,GO:0006914,pexophagy,core_autophagy_shared,True,YPL120W,VPS30,ensembl_compara_pan_homology,high,ensembl_compara:ortholog_one2one->YPL120W,Beclin/Vps30; Compara 1:1 ortholog of ScVPS30 (ScATG6)
+VPS34,AT1G60490,P42339,GO:0006914,pexophagy,core_autophagy_shared,True,YLR240W,VPS34,ensembl_compara_pan_homology,high,ensembl_compara:ortholog_one2one->YLR240W,PI3-kinase; Compara 1:1 ortholog of ScVPS34
+VPS15,AT4G29380,Q9M0E5,GO:0006914,pexophagy,core_autophagy_shared,True,YBR097W,VPS15,conserved_family_GO,medium,conserved_family_and_shared_GO,PI3K complex regulatory subunit; conserved (family/GO)

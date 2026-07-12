@@ -1,0 +1,215 @@
+{
+ "routes": {
+  "peroxisome_biogenesis": "Arabidopsis(resolved AGI) -> rice via Ensembl Plants Compara (At->Os orthologues); 3 poorly-conserved peroxins (PEX3/PEX22/PEX15) recovered by RAP-DB functional name",
+  "mito_biogenesis": "yeast UniProt -> Arabidopsis via PANTHER LDO/O ortholog -> AGI(MyGene) -> rice via Compara; conserved-missing recovered by RAP-DB name+reciprocal",
+  "er_biogenesis": "same two-hop as mito",
+  "degradation_core": "Arabidopsis pexophagy core ATG (resolved AGI) -> rice via Compara; missing ATG8/10/18 recovered by RAP-DB name; reused for all three organelles",
+  "namespace": "rice RAP-DB (Os########) loci"
+ },
+ "dropped": [
+  {
+   "module": "mito_bio",
+   "gene": "TOM20",
+   "reason": "lineage_specific_no_plant_ortholog"
+  },
+  {
+   "module": "mito_bio",
+   "gene": "TOM22",
+   "reason": "lineage_specific_no_plant_ortholog"
+  },
+  {
+   "module": "mito_bio",
+   "gene": "TOM70",
+   "reason": "lineage_specific_no_plant_ortholog"
+  },
+  {
+   "module": "mito_bio",
+   "gene": "TOM5",
+   "reason": "lineage_specific_no_plant_ortholog"
+  },
+  {
+   "module": "mito_bio",
+   "gene": "TOM6",
+   "reason": "lineage_specific_no_plant_ortholog"
+  },
+  {
+   "module": "mito_bio",
+   "gene": "SSC1",
+   "reason": "conserved_but_unresolvable_via_MCP (RAP-DB/Compara annotation gap, not biological absence)"
+  },
+  {
+   "module": "mito_bio",
+   "gene": "TIM18",
+   "reason": "lineage_specific_no_plant_ortholog"
+  },
+  {
+   "module": "mito_bio",
+   "gene": "MIC19",
+   "reason": "lineage_specific_no_plant_ortholog"
+  },
+  {
+   "module": "mito_bio",
+   "gene": "MIC12",
+   "reason": "lineage_specific_no_plant_ortholog"
+  },
+  {
+   "module": "mito_bio",
+   "gene": "MIC27",
+   "reason": "lineage_specific_no_plant_ortholog"
+  },
+  {
+   "module": "mito_bio",
+   "gene": "MIC26",
+   "reason": "lineage_specific_no_plant_ortholog"
+  },
+  {
+   "module": "mito_bio",
+   "gene": "FZO1",
+   "reason": "lineage_specific_no_plant_ortholog"
+  },
+  {
+   "module": "mito_bio",
+   "gene": "MGM1",
+   "reason": "no clean plant OPA1/MGM1 ortholog (Compara sprawled across 12 dynamins)"
+  },
+  {
+   "module": "er_bio",
+   "gene": "SEC61",
+   "reason": "conserved_but_unresolvable_via_MCP (RAP-DB/Compara annotation gap, not biological absence)"
+  },
+  {
+   "module": "er_bio",
+   "gene": "SRP21",
+   "reason": "conserved_but_unresolvable_via_MCP (RAP-DB/Compara annotation gap, not biological absence)"
+  },
+  {
+   "module": "er_bio",
+   "gene": "OST4",
+   "reason": "lineage_specific_no_plant_ortholog"
+  },
+  {
+   "module": "er_bio",
+   "gene": "OST5",
+   "reason": "lineage_specific_no_plant_ortholog"
+  },
+  {
+   "module": "deg_core",
+   "gene": "ATG2",
+   "agi": "AT3G19190",
+   "reason": "no_rice_ortholog_recovered"
+  }
+ ],
+ "recovered": [
+  {
+   "module": "perox_bio",
+   "gene": "PEX3",
+   "os": "Os09g0314300",
+   "reason": "no_compara_named_recovery"
+  },
+  {
+   "module": "perox_bio",
+   "gene": "PEX22",
+   "os": "Os04g0672800",
+   "reason": "no_compara_named_recovery"
+  },
+  {
+   "module": "perox_bio",
+   "gene": "APEM9",
+   "os": "Os06g0702800",
+   "reason": "no_compara_named_recovery"
+  },
+  {
+   "module": "mito_bio",
+   "gene": "ERV1",
+   "os": "Os05g0552500"
+  },
+  {
+   "module": "mito_bio",
+   "gene": "MIC60",
+   "os": "Os04g0636600"
+  },
+  {
+   "module": "er_bio",
+   "gene": "SSS1",
+   "os": "Os02g0178400"
+  },
+  {
+   "module": "er_bio",
+   "gene": "SSS1",
+   "os": "Os06g0653900"
+  },
+  {
+   "module": "er_bio",
+   "gene": "SRP54",
+   "os": "Os01g0772800"
+  },
+  {
+   "module": "er_bio",
+   "gene": "CHO2",
+   "os": "Os01g0695100"
+  },
+  {
+   "module": "er_bio",
+   "gene": "CHO2",
+   "os": "Os05g0548900"
+  },
+  {
+   "module": "deg_core",
+   "gene": "ATG8A",
+   "os": "Os07g0512200"
+  },
+  {
+   "module": "deg_core",
+   "gene": "ATG8E",
+   "os": "Os07g0512200"
+  },
+  {
+   "module": "deg_core",
+   "gene": "ATG10",
+   "os": "Os12g0506800"
+  },
+  {
+   "module": "deg_core",
+   "gene": "ATG10",
+   "os": "Os04g0497350"
+  },
+  {
+   "module": "deg_core",
+   "gene": "ATG18A",
+   "os": "Os01g0934000"
+  },
+  {
+   "module": "deg_core",
+   "gene": "ATG18A",
+   "os": "Os02g0791800"
+  },
+  {
+   "module": "deg_core",
+   "gene": "ATG18A",
+   "os": "Os05g0405900"
+  }
+ ],
+ "empty_selective": {
+  "pexophagy": {
+   "missing_yeast_receptor": [
+    "Atg36 (YIL011W)"
+   ],
+   "reason": "plants lack ortholog of yeast selective autophagy receptor; selective set EMPTY (0 genes)"
+  },
+  "mitophagy": {
+   "missing_yeast_receptor": [
+    "Atg32 (YIL146C)",
+    "Atg33 (YLR356W)"
+   ],
+   "reason": "plants lack ortholog of yeast selective autophagy receptor; selective set EMPTY (0 genes)"
+  },
+  "erphagy": {
+   "missing_yeast_receptor": [
+    "Atg39 (YLR312C)",
+    "Atg40 (YOR152C)"
+   ],
+   "reason": "plants lack ortholog of yeast selective autophagy receptor; selective set EMPTY (0 genes)"
+  }
+ },
+ "empty_selective_arm_note": "Plants lack orthologs of the yeast selective autophagy receptors (Atg36 pexophagy; Atg32/Atg33 mitophagy; Atg39/Atg40 ER-phagy). Per platform guardrail these were NOT invented. All degradation modules contain only core ATG machinery (shared_with_bulk_autophagy=True); the organelle-selective set is EMPTY (0 genes) for peroxisome, mitochondrion, and ER. degradation_selective_score will be NaN by construction \u2014 expected and correct, tiered down."
+}

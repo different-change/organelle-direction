@@ -1,0 +1,8 @@
+symbol,resolved_ensembl_id,entrez_id,gene_name,module,notes
+XBP1,ENSG00000100219,7494,X-box binding protein 1,regulator,"UPR master TF/effector - HELD OUT of biogenesis score (scoring UPR-inducer with its own effector TFs would be near-tautological), reported separately"
+ATF4,ENSG00000128272,468,activating transcription factor 4,regulator,"UPR master TF/effector - HELD OUT of biogenesis score (scoring UPR-inducer with its own effector TFs would be near-tautological), reported separately"
+DDIT3,ENSG00000175197,1649,DNA damage inducible transcript 3,regulator,"UPR master TF/effector - HELD OUT of biogenesis score (scoring UPR-inducer with its own effector TFs would be near-tautological), reported separately"
+ATF6B,ENSG00000168468,1388,activating transcription factor 6 beta,regulator,"UPR master TF/effector - HELD OUT of biogenesis score (scoring UPR-inducer with its own effector TFs would be near-tautological), reported separately"
+CREB3,ENSG00000107175,10488,cAMP responsive element binding protein 3,regulator,"UPR master TF/effector - HELD OUT of biogenesis score (scoring UPR-inducer with its own effector TFs would be near-tautological), reported separately"
+CREB3L2,ENSG00000182158,64764,cAMP responsive element binding protein 3 like 2,regulator,"UPR master TF/effector - HELD OUT of biogenesis score (scoring UPR-inducer with its own effector TFs would be near-tautological), reported separately"
+NFE2L2,ENSG00000116044,4780,NFE2 like bZIP transcription factor 2,regulator,"UPR master TF/effector - HELD OUT of biogenesis score (scoring UPR-inducer with its own effector TFs would be near-tautological), reported separately"

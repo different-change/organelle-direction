@@ -1,0 +1,137 @@
+{
+ "geneset_name": "arabidopsis_mito_ER_directional_dynamics_fill",
+ "version": "1.0.0",
+ "created_utc": "2026-07-10T20:48:58.062630Z",
+ "organism": {
+  "name": "Arabidopsis thaliana",
+  "taxid": 3702,
+  "id_namespace": "TAIR/AGI locus (AT#G#####)"
+ },
+ "seed_organism": {
+  "name": "Saccharomyces cerevisiae S288C",
+  "taxid": 559292,
+  "id_namespace": "SGD systematic ORF"
+ },
+ "design_note": "Directional organelle-dynamics fill for Arabidopsis MITOCHONDRION and ER by orthology transfer of conserved biogenesis + core-autophagy machinery from yeast seeds. Net = biogenesis - degradation; degradation_selective from organelle-selective receptors only.",
+ "resolver_services": {
+  "candidate_symbols": "ensembl_lookup (genomes MCP, authoritative TAIR symbol->AGI) + mygene.info query_genes (genes-ontologies MCP, taxid 3702)",
+  "orthology_confirmation": "Ensembl Plants Compara pan-homology (genomes MCP ensembl_homology), Arabidopsis->S.cerevisiae direction (cross-kingdom Compara reachable only from the plant side)",
+  "uniprot": "mygene.info Swiss-Prot xref"
+ },
+ "confidence_scheme": {
+  "high": "ensembl_compara ortholog_one2one to the seed yeast ORF",
+  "medium": "ensembl_compara ortholog_one2many/many2many to the seed ORF, OR authoritative TAIR-symbol ortholog (conserved family) with/without Compara paralog hits",
+  "low": "symbol-resolved conserved family, no Compara ortholog call",
+  "inclusion_rule": "AGI kept ONLY if (a) Compara-confirmed to the seed yeast ORF, or (b) resolved via authoritative TAIR nomenclature AND having NO Compara hit to a different yeast gene. A TAIR-symbol candidate whose Compara hits map to a different yeast ORF is assigned to THAT gene, not the tested seed (prevents mis-attribution, e.g. DGL1/AT5G66680 -> WBP1/YEL002C, not OST1/YJL002C). Loci are de-duplicated within each module."
+ },
+ "selective_arm_guardrail": {
+  "rule": "Arabidopsis lacks orthologs of the yeast selective autophagy receptors Atg32 (mitophagy) and Atg39/Atg40 (ER-phagy).",
+  "action": "No plant ortholog invented/forced. Degradation modules contain ONLY core ATG machinery (shared_with_bulk_autophagy=True). Selective set = EMPTY (0 genes) for BOTH organelles.",
+  "consequence": "degradation_selective_score is NaN by construction for mito and ER \u2014 EXPECTED and correct, identical to plant peroxisome/chloroplast verticals.",
+  "compara_check": "ATG32(YIL146C), ATG33(YLR356W), ATG39(YLR312C), ATG40(YOR152C) yielded no Arabidopsis ortholog under symbol resolution or Compara."
+ },
+ "modules": {
+  "mitochondrion_biogenesis": {
+   "n_genes": 27,
+   "seed_genes": 33,
+   "seed_symbols_covered": 16,
+   "seed_symbols_missed": [
+    "CAF4",
+    "FZO1",
+    "MDV1",
+    "MGM1",
+    "MIC10",
+    "MIC12",
+    "MIC19",
+    "MIC26",
+    "MIC27",
+    "MIC60",
+    "PAM18",
+    "TIM18",
+    "TIM22",
+    "TIM54",
+    "TOM22",
+    "TOM70",
+    "UGO1"
+   ],
+   "confidence": {
+    "medium": 24,
+    "high": 3
+   },
+   "methods": {
+    "ensembl_compara_pan_homology": 21,
+    "conserved_family_GO": 6
+   }
+  },
+  "mitophagy": {
+   "n_genes": 14,
+   "seed_genes": 10,
+   "seed_symbols_covered": 7,
+   "seed_symbols_missed": [
+    "ATG1",
+    "ATG32",
+    "ATG33"
+   ],
+   "confidence": {
+    "medium": 11,
+    "high": 3
+   },
+   "methods": {
+    "ensembl_compara_pan_homology": 11,
+    "conserved_family_GO": 3
+   }
+  },
+  "er_biogenesis": {
+   "n_genes": 21,
+   "seed_genes": 29,
+   "seed_symbols_covered": 12,
+   "seed_symbols_missed": [
+    "CHO2",
+    "LHS1",
+    "OST1",
+    "OST4",
+    "OST5",
+    "OST6",
+    "SEC61",
+    "SEC62",
+    "SEC63",
+    "SEC65",
+    "SRP101",
+    "SRP102",
+    "SRP21",
+    "SRP54",
+    "SRP68",
+    "SRP72",
+    "SSS1"
+   ],
+   "confidence": {
+    "medium": 18,
+    "high": 3
+   },
+   "methods": {
+    "ensembl_compara_pan_homology": 17,
+    "conserved_family_GO": 4
+   }
+  },
+  "erphagy": {
+   "n_genes": 14,
+   "seed_genes": 10,
+   "seed_symbols_covered": 7,
+   "seed_symbols_missed": [
+    "ATG1",
+    "ATG39",
+    "ATG40"
+   ],
+   "confidence": {
+    "medium": 11,
+    "high": 3
+   },
+   "methods": {
+    "ensembl_compara_pan_homology": 11,
+    "conserved_family_GO": 3
+   }
+  }
+ },
+ "dropped_regulators": "bZIP UPR transcription factors (bZIP28/bZIP60) NOT included \u2014 lineage-specific/plant UPR regulators, not conserved machinery. IRE1 (IRE1A/B) retained as conserved UPR sensor.",
+ "coverage_notes": "Symbol-based resolution ceiling: SEC61 alpha channel, SEC61 gamma, SEC62/63, SRP19/68/72, OST4/5, MICOS (Mic10/19/60), and several small TOM/TIM subunits are not indexed under standard symbols in Ensembl Plants/mygene and could not be resolved without hand-typing (prohibited). Captured cores are strong and comparable to prior plant verticals."
+}

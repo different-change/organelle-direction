@@ -1,0 +1,11 @@
+symbol,resolved_systematic_id,uniprot_id,gene_name,source_go_terms,module,submodule,shared_with_bulk_autophagy,notes
+ATG32,YIL146C,P40458,mitophagy protein ATG32,GO:0000422,mitophagy,receptor_selective,False,mitophagy receptor (OMM); genuine selective receptor
+ATG33,YLR356W,Q06485,Atg33p,GO:0000422,mitophagy,receptor_selective,False,contributes to mitophagy of aged/stationary mitochondria
+ATG11,YPR049C,Q12527,autophagy protein ATG11,GO:0000045;GO:0000422;GO:0006914,mitophagy,scaffold,True,selective-autophagy scaffold; shared across selective autophagy
+ATG1,YGL180W,P53104,serine/threonine protein kinase ATG1,GO:0000045;GO:0000422;GO:0000423;GO:0006914,mitophagy,core_autophagy_shared,True,Atg1 kinase initiation
+ATG13,YPR185W,Q06628,serine/threonine protein kinase regulatory subunit ATG13,GO:0000045;GO:0000422;GO:0000423;GO:0006914,mitophagy,core_autophagy_shared,True,Atg1 complex regulatory subunit
+ATG8,YBL078C,P38182,ubiquitin-like protein ATG8,GO:0000045;GO:0000422;GO:0000423;GO:0006914,mitophagy,core_autophagy_shared,True,Atg8 lipidated on autophagosome membrane
+ATG9,YDL149W,Q12142,autophagy protein ATG9,GO:0000045;GO:0000423;GO:0006914,mitophagy,core_autophagy_shared,True,membrane source transmembrane protein
+ATG7,YHR171W,P38862,Atg7p,GO:0000045;GO:0000422;GO:0000423;GO:0006914,mitophagy,core_autophagy_shared,True,E1-like Atg8/Atg12 activating enzyme
+ATG5,YPL149W,Q12380,Atg5p,GO:0000045;GO:0000423;GO:0006914,mitophagy,core_autophagy_shared,True,Atg12-Atg5 conjugate
+ATG12,YBR217W,P38316,Atg12p,GO:0000045;GO:0000422;GO:0006914,mitophagy,core_autophagy_shared,True,ubiquitin-like conjugated to Atg5

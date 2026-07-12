@@ -1,0 +1,10 @@
+cancer,mito_biogenesis,confidence,ribosome,dissociation,rationale
+coad,down,high,up,yes,Normal colonocytes are exceptionally oxidative (butyrate beta-oxidation is their primary fuel). Tumor Warburg shift to glucose => large machinery drop vs a very mito-rich normal.
+gbm,down,high,up,yes,"Normal brain is among the most oxidative tissues; glioblastoma is strongly glycolytic (aerobic glycolysis, hypoxic niches). Tumor-vs-normal-brain => machinery down."
+pdac,down,high,up,yes,"Dense desmoplastic stroma, hypoxia, KRAS-driven glycolytic/glutaminolytic metabolism; poor perfusion suppresses OXPHOS machinery."
+hnscc,down,moderate,up,yes,Squamous carcinoma with reverse-Warburg/glycolytic phenotype; proliferative epithelium.
+lscc,down,moderate,up,yes,"Lung squamous carcinoma; strongly glycolytic, SOX2/TP63 squamous program."
+luad,down,moderate,up,yes,"Lung adenocarcinoma; proliferative, KRAS/EGFR; net machinery decrease expected though some OXPHOS retention reported."
+brca,down,moderate,up,yes,"Breast carcinoma; Warburg shift on average, but subtype-heterogeneous (luminal more oxidative than basal) => moderate, not high, confidence."
+ov,down,low,up,uncertain,"High-grade serous ovarian; matched-normal is problematic (comparator often fallopian tube; variable tumor purity) => low confidence, direction may be noisy."
+ucec,down,low,up,uncertain,"Endometrial carcinoma; PTEN/PI3K driven; a subset is reported OXPHOS-high, and normal endometrium is only moderately oxidative => weakest/most-uncertain prediction, flagged as the one most likely to miss."

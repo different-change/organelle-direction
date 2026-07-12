@@ -1,0 +1,179 @@
+{
+ "geneset_name": "chloroplast_directional_dynamics_modules",
+ "version": "1.0.0",
+ "created_utc": "2026-07-10T18:09:06.543799Z",
+ "project": "Directional organelle-dynamics platform (organellomics; Hickey/Nazarov/Smertenko Plant Physiol 2023) \u2014 vertical #3 CHLOROPLAST",
+ "phase": "Vertical #3 gene module definition + validation",
+ "design_note": "Directional score = biogenesis - degradation, plus a SELECTIVE degradation sub-score built only from chloroplast-selective degradation candidates (shared_with_bulk_autophagy=False). Strategic point: like plant pexophagy (no ATG36 ortholog), Arabidopsis CHLOROPHAGY has NO strong clean ATG8 selective RECEPTOR. The selective arm here is populated only by LOW/MEDIUM-confidence CANDIDATES: ATG8-interacting plastid proteins (ATI1/ATI2), the ATG-independent CV vesiculation pathway, a QC E3 (PUB4), and the CHLORAD ubiquitin-proteasome envelope-degradation machinery (SP1/SP2/SPL2 \u2014 mechanistically distinct from vacuolar chlorophagy). Expect the selective arm to be WEAK/noisy \u2014 tier it honestly, exactly like plant pexophagy.",
+ "organisms": {
+  "arabidopsis": {
+   "name": "Arabidopsis thaliana",
+   "taxid": 3702,
+   "id_namespace": "AGI locus (TAIR/Araport, e.g. AT4G02510)"
+  }
+ },
+ "namespace_note": "Native Arabidopsis vertical \u2014 no cross-taxa orthology mapping needed; base 8-column schema (no ortholog_* columns).",
+ "go_terms_used": {
+  "biogenesis": {
+   "GO:0045037": "protein import into chloroplast stroma",
+   "GO:0045036": "protein targeting to chloroplast",
+   "GO:0010207": "photosystem II assembly",
+   "GO:0010206": "photosystem II repair",
+   "GO:0009658": "chloroplast organization",
+   "GO:0009657": "plastid organization",
+   "GO:0010020": "chloroplast fission",
+   "GO:0009534": "chloroplast thylakoid",
+   "GO:0016226": "iron-sulfur cluster assembly",
+   "GO:0009706": "chloroplast inner membrane",
+   "GO:0009707": "chloroplast outer membrane",
+   "GO:0009941": "chloroplast envelope",
+   "GO:0006457": "protein folding",
+   "GO:0031977": "thylakoid lumen",
+   "GO:0009535": "chloroplast thylakoid membrane",
+   "GO:0000917": "division septum assembly",
+   "GO:0043572": "plastid fission",
+   "GO:0010027": "thylakoid membrane organization"
+  },
+  "degradation": {
+   "GO:0006914": "autophagy",
+   "GO:0000045": "autophagosome assembly",
+   "GO:0016236": "macroautophagy",
+   "GO:0034727": "piecemeal microautophagy of the nucleus",
+   "GO:0000423": "mitophagy",
+   "GO:0061684": "chaperone-mediated autophagy",
+   "GO:0016567": "protein ubiquitination",
+   "GO:0043161": "proteasome-mediated ubiquitin-dependent protein catabolic process",
+   "GO:0000151": "ubiquitin ligase complex",
+   "GO:0004842": "ubiquitin-protein transferase activity",
+   "GO:0009060": "aerobic respiration",
+   "GO:0010623": "programmed cell death involved in cell development",
+   "GO:0009651": "response to salt stress",
+   "GO:0010150": "leaf senescence",
+   "GO:0090693": "plant organ senescence"
+  }
+ },
+ "resolver_services": {
+  "gene_resolution": "mygene.info via genes-ontologies MCP (query_genes; scopes=symbol,alias / ensembl.gene; species=3702; AGI locus + Swiss-Prot returned). Stragglers/collisions resolved via genomes MCP (ensembl_lookup / ensembl_xrefs).",
+  "go_membership": "QuickGO get_go_annotations (genes-ontologies MCP); per-gene distinct GO IDs intersected with the seed term sets to CONFIRM membership rather than hand-assign.",
+  "literature_confirmation": "Selective-candidate identities and mechanisms CONFIRMED via MCP resolvers (genes-ontologies: get_uniprot_entries protein names + get_go_annotations GO terms), NOT by hand-typed citations."
+ },
+ "counts_per_module": {
+  "biogenesis": 37,
+  "degradation": 26,
+  "degradation_core_shared": 19,
+  "degradation_selective_candidates": 7
+ },
+ "submodule_breakdown": {
+  "biogenesis:division": 10,
+  "biogenesis:photo_assembly": 9,
+  "biogenesis:photo_marker": 4,
+  "biogenesis:tic_import": 7,
+  "biogenesis:toc_import": 7,
+  "degradation:chlorad_selective": 3,
+  "degradation:chlorophagy_selective_candidate": 4,
+  "degradation:core_autophagy_shared": 19
+ },
+ "selective_arm_design": {
+  "selective_ids": [
+   {
+    "symbol": "ATI1",
+    "resolved_systematic_id": "AT2G45980",
+    "submodule": "chlorophagy_selective_candidate"
+   },
+   {
+    "symbol": "ATI2",
+    "resolved_systematic_id": "AT4G00355",
+    "submodule": "chlorophagy_selective_candidate"
+   },
+   {
+    "symbol": "CV",
+    "resolved_systematic_id": "AT2G25625",
+    "submodule": "chlorophagy_selective_candidate"
+   },
+   {
+    "symbol": "PUB4",
+    "resolved_systematic_id": "AT2G23140",
+    "submodule": "chlorophagy_selective_candidate"
+   },
+   {
+    "symbol": "SP1",
+    "resolved_systematic_id": "AT1G63900",
+    "submodule": "chlorad_selective"
+   },
+   {
+    "symbol": "SP2",
+    "resolved_systematic_id": "AT3G44160",
+    "submodule": "chlorad_selective"
+   },
+   {
+    "symbol": "SPL2",
+    "resolved_systematic_id": "AT1G54150",
+    "submodule": "chlorad_selective"
+   }
+  ],
+  "confidence": "LOW for ATG8/vacuolar candidates (ATI1/ATI2/CV/PUB4); MEDIUM for CHLORAD (SP1/SP2/SPL2).",
+  "expectation": "Weak/near-empty selective signal expected, analogous to plant pexophagy. Report tiered, not as a clean receptor."
+ },
+ "collision_and_qc_flags": [
+  "TOC75: symbol alias resolves to OEP80/AT5G19620 (a different outer-envelope beta-barrel). Used TOC75-III=AT3G46740 (the import channel).",
+  "PPI1: alias collides with 'proton pump interactor 1' AT4G27500. Used TOC33=AT1G02280.",
+  "TIC100: mygene 'TIC100'->EMB2794/AT2G02150 collision; correct 1MDa-TIC subunit is AT5G22640 (dropped EMB2794).",
+  "ATG5: alias resolves to SAC8/AT3G51830 collision; used APG5=AT5G17290.",
+  "ATG6: alias resolves to ACX4/AT3G51840 collision; used BECLIN1=AT3G61710.",
+  "CV: Ensembl/NCBI description for AT2G25625 is 'histone deacetylase-like' (misannotation); UniProt Q8S8K8 confirms chloroplast vesiculation. Retained with note.",
+  "SP1: also functions in peroxisome biogenesis (cross-organelle); flagged in notes."
+ ],
+ "cross_organelle_notes": [
+  "ARC5/DRP5B (AT3G19720) plastid-division dynamin is SHARED with peroxisome division machinery.",
+  "SP1/SPL2 CHLORAD E3 ligases also act on peroxisome biogenesis."
+ ],
+ "dropped_genes": {
+  "GLK1": "lineage-specific GARP/Golden2-like transcription factor \u2014 regulator, not conserved machinery.",
+  "GLK2": "lineage-specific Golden2-like transcription factor \u2014 regulator, not machinery.",
+  "GNC": "GATA transcription factor \u2014 regulator, not machinery.",
+  "CGA1(GNL)": "GATA transcription factor \u2014 regulator, not machinery.",
+  "TIC214(ycf1)": "plastid(chloroplast)-encoded \u2014 outside the nuclear module namespace / expression matrices.",
+  "EMB2794(AT2G02150)": "mygene 'TIC100' collision; not the 1MDa-TIC subunit."
+ },
+ "mechanism_caveat_chlorad_vs_chlorophagy": "CHLORAD (SP1/SP2/SPL2) is ubiquitin-proteasome ENVELOPE degradation of the import apparatus; classical CHLOROPHAGY (ATI1/ATI2/CV/RCB) is vacuolar. Both are chloroplast-directed clearance and both included as selective candidates, but they are distinct pathways \u2014 the mixed mechanism further weakens a single 'selective receptor' interpretation.",
+ "mrna_proxy_caveat": "Transcript abundance is a proxy. Positive net_direction = 'consistent with a shift toward chloroplast biogenesis'; negative = 'consistent with a shift toward clearance'. NOT organelle turnover rates.",
+ "files": {
+  "biogenesis": "chloroplast_biogenesis_arabidopsis.csv",
+  "degradation": "chloroplast_chlorophagy_arabidopsis.csv"
+ },
+ "selective_candidate_mcp_confirmation": {
+  "CV_AT2G25625_Q8S8K8": {
+   "uniprot_protein_name": "Protein CHLOROPLAST VESICULATION",
+   "go": [
+    "GO:1904821 chloroplast disassembly",
+    "GO:0097708 intracellular vesicle",
+    "GO:0005773 vacuole",
+    "GO:0009941 chloroplast envelope",
+    "GO:0010150 leaf senescence"
+   ],
+   "interpretation": "vacuolar chloroplast-disassembly / vesiculation candidate \u2014 MCP-confirmed; resolves the Ensembl 'histone deacetylase-like' misannotation."
+  },
+  "SP1_AT1G63900_Q8L7N4": {
+   "uniprot_protein_name": "E3 ubiquitin-protein ligase SP1 / SUPPRESSOR OF PPI1 LOCUS 1 (RING-type)",
+   "go": [
+    "GO:0016567 protein ubiquitination",
+    "GO:0045037 protein import into chloroplast stroma",
+    "GO:0009658 chloroplast organization",
+    "GO:0016558 protein import into peroxisome matrix (CROSS-ORGANELLE)"
+   ],
+   "interpretation": "RING E3 of CHLORAD (ubiquitin-proteasome envelope degradation of TOC apparatus); MCP GO also confirms the peroxisome cross-organelle role."
+  },
+  "SP2_AT3G44160_Q5PP51": {
+   "uniprot_protein_name": "SUPPRESSOR OF PPI1 LOCUS 2, chloroplastic / Outer envelope protein 39",
+   "go": [
+    "GO:0015267 channel activity",
+    "GO:0031625 ubiquitin protein ligase binding",
+    "GO:0030162 regulation of proteolysis",
+    "GO:0009507 chloroplast",
+    "GO:1900057 positive regulation of leaf senescence"
+   ],
+   "interpretation": "Omp85-family retrotranslocation channel of CHLORAD; MCP-confirmed chloroplast + proteolysis link."
+  },
+  "note": "PMIDs are omitted from provenance because they were not retrieved through a logged MCP/literature tool call. Membership rests on MCP UniProt/GO evidence above; the web-search step that originally motivated inclusion is treated as non-authoritative context, not provenance."
+ }
+}

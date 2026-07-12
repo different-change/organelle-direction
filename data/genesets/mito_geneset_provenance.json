@@ -1,0 +1,146 @@
+{
+ "geneset_name": "mitochondrion_directional_dynamics_modules",
+ "version": "1.0.0",
+ "created_utc": "2026-07-10T05:32:53.061486Z",
+ "project": "Directional organelle-dynamics platform (organellomics; Hickey/Nazarov/Smertenko Plant Physiol 2023) \u2014 vertical #2 MITOCHONDRION",
+ "phase": "Vertical #2 gene module definition + validation",
+ "design_note": "Directional score = biogenesis module score - degradation(mitophagy) module score, plus a SELECTIVE degradation sub-score built only from the mito-selective receptor genes (Atg32/Atg33). Strategic point: unlike peroxisome pexophagy (Arabidopsis has NO ATG36 ortholog, selective score empty), mitophagy HAS a genuine selective receptor (Atg32), so the SELECTIVE degradation arm is populated and testable here \u2014 closing the weak arm.",
+ "organisms": {
+  "yeast": {
+   "name": "Saccharomyces cerevisiae S288C",
+   "taxid": 559292,
+   "id_namespace": "SGD systematic ORF (e.g. YIL146C)"
+  }
+ },
+ "go_terms_used": {
+  "biogenesis": {
+   "GO:0030150": "protein import into mitochondrial matrix",
+   "GO:0045040": "protein insertion into mitochondrial outer membrane",
+   "GO:0045039": "protein insertion into mitochondrial inner membrane",
+   "GO:0045041": "protein import into mitochondrial intermembrane space (MIA)",
+   "GO:0160203": "protein import into IMS via disulfide relay (MIA)",
+   "GO:0061617": "MICOS complex",
+   "GO:0042407": "cristae formation",
+   "GO:0044284": "mitochondrial crista junction",
+   "GO:0007007": "inner mitochondrial membrane organization",
+   "GO:0008053": "mitochondrial fusion",
+   "GO:0000266": "mitochondrial fission"
+  },
+  "degradation": {
+   "GO:0000422": "autophagy of mitochondrion (mitophagy)",
+   "GO:0000423": "mitophagy",
+   "GO:0006914": "macroautophagy (bulk - flags shared core autophagy machinery)",
+   "GO:0000045": "autophagosome assembly (bulk)"
+  }
+ },
+ "resolver_services": {
+  "gene_resolution": "mygene.info via genes-ontologies MCP (query_genes; scopes=symbol,alias; species=559292; SGD systematic + Swiss-Prot returned)",
+  "go_membership": "QuickGO get_go_annotations (genes-ontologies MCP); per-gene distinct GO IDs intersected with the seed term set to CONFIRM membership rather than hand-assign",
+  "go_term_metadata": "EBI OLS4 get_ontology_term / search_ontology_terms (genes-ontologies MCP)"
+ },
+ "literature_anchors_pmids": {
+  "atg32_mitophagy_receptor": [
+   "19619495",
+   "19619494"
+  ],
+  "atg33_stationary_mitophagy": [
+   "19793921"
+  ],
+  "atg11_yeast_mitophagy_scaffold": [
+   "29370687"
+  ],
+  "micos_cristae": [
+   "21944719",
+   "21987634"
+  ],
+  "import_machinery_review": [
+   "30626975"
+  ]
+ },
+ "counts_per_module": {
+  "biogenesis": 33,
+  "mitophagy": 10,
+  "mitophagy_selective_receptor": 2,
+  "mitophagy_scaffold_shared": 1,
+  "mitophagy_core_shared": 7
+ },
+ "submodule_breakdown": {
+  "biogenesis": {
+   "import_TOM": 7,
+   "import_TIM23": 3,
+   "import_PAM": 5,
+   "import_TIM22": 3,
+   "import_MIA": 2,
+   "cristae_MICOS": 6,
+   "fusion": 3,
+   "fission": 4
+  },
+  "mitophagy": {
+   "receptor_selective": 2,
+   "scaffold": 1,
+   "core_autophagy_shared": 7
+  }
+ },
+ "selective_arm_design": {
+  "selective_receptor_genes": [
+   "ATG32 (YIL146C)",
+   "ATG33 (YLR356W)"
+  ],
+  "shared_with_bulk_autophagy_False": [
+   "ATG32",
+   "ATG33"
+  ],
+  "contrast_with_peroxisome": "Peroxisome vertical: Arabidopsis has NO ATG36 ortholog, so its selective degradation score was empty (weak arm). Mitochondrion vertical: Atg32 is a bona fide, conserved-in-fungi selective mitophagy receptor, so degradation_selective is populated and can be validated \u2014 demonstrating the scorer's degradation arm becomes trustworthy when a real receptor exists."
+ },
+ "collision_and_qc_flags": {
+  "SSC1_alias_collision": "query 'SSC1' also matched PMR1 (S000003135) as an alias; chose the record whose symbol==SSC1 (YJR045C / S000003806).",
+  "MIA40_ERV1_go": "QuickGO distinct_go_ids for MIA40/ERV1 did not carry the coarse import terms; membership confirmed via GO:0045041 / GO:0160203 (IMS disulfide-relay import).",
+  "membership_confirmation": "41/43 genes carried >=1 seed GO term directly in QuickGO; the 2 exceptions (MIA40, ERV1) confirmed via the MIA-specific IMS-import terms."
+ },
+ "fission_sharing_note": "DNM1 (YLL001W) and FIS1 (YIL065C) are SHARED with peroxisome division machinery \u2014 the same fission dynamin/receptor divides both organelles. They are flagged in 'notes' as shared_with_peroxisome_division and are NOT double-counted as autophagy (shared_with_bulk_autophagy=False). MDV1/CAF4 are mitochondria-specific fission adaptors.",
+ "dropped_genes": {
+  "regulators_dropped": [
+   "HAP2",
+   "HAP3",
+   "HAP4",
+   "HAP5"
+  ],
+  "reason": "HAP2/3/4/5 (CCAAT-binding complex) are lineage-specific TRANSCRIPTIONAL REGULATORS of respiratory/mitochondrial biogenesis, not conserved structural machinery. Consistent with the peroxisome-vertical rule to keep conserved machinery and drop diverging regulators; kept out of the biogenesis module."
+ },
+ "mrna_proxy_caveat": "Transcript abundance is a proxy. A positive net_direction is 'consistent with a shift toward biogenesis'; elevated degradation/selective scores are 'consistent with a shift toward clearance (mitophagy)'. These are NOT organelle turnover rates.",
+ "files": [
+  "mito_biogenesis_yeast.csv",
+  "mito_mitophagy_yeast.csv",
+  "mito_geneset_provenance.json"
+ ],
+ "literature_verification_note": "All PMIDs verified via pubmed MCP get_article_metadata (first author + year + title checked). Two originally-drafted PMIDs were REJECTED on verification and removed: 19749676 (a dermatology paper, not Okamoto/Atg32) and 23392225 (mammalian FIP200/Atg16L1, not yeast Atg11); replaced with 19619494 (Okamoto 2009 Atg32) and 29370687 (Fukuda/Kanki yeast mitophagy review).",
+ "positive_controls_validation_results": {
+  "test_method": "Welch's unequal-variance two-sample t-test (equal_var=False); Cohen d and one-sided Mann-Whitney U reported alongside. NOTE: an earlier draft mislabeled a pooled Student's t as Welch; these are the true Welch values.",
+  "biogenesis_control_GSE301747": {
+   "contrast": "glycerol (respiratory) vs glucose (fermentative), n=3 vs 3",
+   "welch_t": 3.41,
+   "p_value": 0.031,
+   "cohen_d": 2.79,
+   "mwu_one_sided_p": 0.05,
+   "verdict": "PASS (significant at alpha=0.05; equal n so Welch==pooled t)"
+  },
+  "mitophagy_control_GSE149016": {
+   "contrast": "rapamycin (mitophagy) vs growing, n=3 vs 2",
+   "total_module": {
+    "welch_t": 5.16,
+    "welch_df": 1.38,
+    "p_value": 0.073,
+    "cohen_d": 5.53,
+    "mwu_one_sided_p": 0.1
+   },
+   "atg32_selective": {
+    "welch_t": 7.38,
+    "welch_df": 1.22,
+    "p_value": 0.058,
+    "cohen_d": 8.26,
+    "mwu_one_sided_p": 0.1
+   },
+   "verdict": "DIRECTION PASS (every growing replicate below every rapamycin replicate; d=5.5 total, 8.3 selective), but formal significance NOT reached: Welch p=0.058-0.073 does not clear alpha=0.05 and MWU floor is 0.10 at n=2 vs 3. Underpowered; treat as directional support, not a significant test."
+  }
+ }
+}

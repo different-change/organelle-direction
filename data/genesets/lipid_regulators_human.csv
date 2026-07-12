@@ -1,0 +1,13 @@
+symbol,resolved_systematic_id,uniprot_id,gene_name,source_go_terms,module,submodule,shared_with_bulk_autophagy,role,notes
+PPARG,ENSG00000132170,P37231,peroxisome proliferator activated receptor gamma,,biogenesis,regulator_lipogenic_TF,False,regulator,lipogenic/adipogenic TF; EXCLUDED from primary score (circular vs adipogenesis PC)
+CEBPA,ENSG00000245848,P49715,CCAAT enhancer binding protein alpha,,biogenesis,regulator_lipogenic_TF,False,regulator,lipogenic/adipogenic TF; EXCLUDED from primary score (circular vs adipogenesis PC)
+CEBPB,ENSG00000172216,P17676,CCAAT enhancer binding protein beta,,biogenesis,regulator_lipogenic_TF,False,regulator,lipogenic/adipogenic TF; EXCLUDED from primary score (circular vs adipogenesis PC)
+SREBF1,ENSG00000072310,P36956,sterol regulatory element binding transcription factor 1,,biogenesis,regulator_lipogenic_TF,False,regulator,lipogenic/adipogenic TF; EXCLUDED from primary score (circular vs adipogenesis PC)
+SREBF2,ENSG00000198911,Q12772,sterol regulatory element binding transcription factor 2,,biogenesis,regulator_lipogenic_TF,False,regulator,lipogenic/adipogenic TF; EXCLUDED from primary score (circular vs adipogenesis PC)
+MLXIPL,ENSG00000009950,Q9NP71,MLX interacting protein like,,biogenesis,regulator_lipogenic_TF,False,regulator,lipogenic/adipogenic TF; EXCLUDED from primary score (circular vs adipogenesis PC)
+NR1H3,ENSG00000025434,Q13133,nuclear receptor subfamily 1 group H member 3,,biogenesis,regulator_lipogenic_TF,False,regulator,lipogenic/adipogenic TF; EXCLUDED from primary score (circular vs adipogenesis PC)
+NR1H2,ENSG00000131408,P55055,nuclear receptor subfamily 1 group H member 2,,biogenesis,regulator_lipogenic_TF,False,regulator,lipogenic/adipogenic TF; EXCLUDED from primary score (circular vs adipogenesis PC)
+USF1,ENSG00000158773,P22415,upstream transcription factor 1,,biogenesis,regulator_lipogenic_TF,False,regulator,lipogenic/adipogenic TF; EXCLUDED from primary score (circular vs adipogenesis PC)
+SCAP,ENSG00000114650,Q12770,SREBF chaperone,,biogenesis,regulator_lipogenic_TF,False,regulator,lipogenic/adipogenic TF; EXCLUDED from primary score (circular vs adipogenesis PC)
+INSIG1,ENSG00000186480,O15503,insulin induced gene 1,,biogenesis,regulator_lipogenic_TF,False,regulator,lipogenic/adipogenic TF; EXCLUDED from primary score (circular vs adipogenesis PC)
+INSIG2,ENSG00000125629,Q9Y5U4,insulin induced gene 2,,biogenesis,regulator_lipogenic_TF,False,regulator,lipogenic/adipogenic TF; EXCLUDED from primary score (circular vs adipogenesis PC)

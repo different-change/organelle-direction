@@ -1,0 +1,21 @@
+symbol,resolved_systematic_id,uniprot_id,gene_name,source_go_terms,module,submodule,shared_with_bulk_autophagy,notes
+ATG36,YJL185C,P46983,Atg36p,GO:0000425,pexophagy,receptor,False,S. cerevisiae pexophagy receptor (Pichia uses Atg30)
+ATG11,YPR049C,Q12527,autophagy protein ATG11,GO:0000425,pexophagy,receptor,True,selective-autophagy scaffold; shared across selective autophagy
+ATG1,YGL180W,P53104,serine/threonine protein kinase ATG1,GO:0006914,pexophagy,core_autophagy_shared,True,Atg1 kinase initiation complex
+ATG13,YPR185W,Q06628,serine/threonine protein kinase regulatory subunit ATG13,GO:0006914,pexophagy,core_autophagy_shared,True,Atg1 complex
+ATG17,YLR423C,Q06410,protein kinase regulatory subunit ATG17,GO:0006914,pexophagy,core_autophagy_shared,True,Atg1 complex scaffold
+ATG29,YPL166W,Q12092,Atg29p,GO:0006914,pexophagy,core_autophagy_shared,True,Atg1 complex
+ATG31,YDR022C,Q12421,Atg31p,GO:0006914,pexophagy,core_autophagy_shared,True,Atg1 complex
+ATG8,YBL078C,P38182,ubiquitin-like protein ATG8,GO:0006914,pexophagy,core_autophagy_shared,True,"ubiquitin-like, autophagosome membrane"
+ATG7,YHR171W,P38862,Atg7p,GO:0006914,pexophagy,core_autophagy_shared,True,E1 activating enzyme
+ATG3,YNR007C,P40344,Atg3p,GO:0006914,pexophagy,core_autophagy_shared,True,E2 for Atg8 lipidation
+ATG5,YPL149W,Q12380,Atg5p,GO:0006914,pexophagy,core_autophagy_shared,True,Atg12 conjugation system
+ATG12,YBR217W,P38316,Atg12p,GO:0006914,pexophagy,core_autophagy_shared,True,ubiquitin-like conjugate
+ATG16,YMR159C,Q03818,Atg16p,GO:0006914,pexophagy,core_autophagy_shared,True,Atg12-Atg5-Atg16 complex
+ATG9,YDL149W,Q12142,autophagy protein ATG9,GO:0006914,pexophagy,core_autophagy_shared,True,lipid-scramblase membrane source
+ATG2,YNL242W,P53855,Atg2p,GO:0006914,pexophagy,core_autophagy_shared,True,lipid transfer at phagophore
+ATG18,YFR021W,P43601,phosphoinositide binding protein ATG18,GO:0006914,pexophagy,core_autophagy_shared,True,"PI3P-binding, works with Atg2"
+VPS30,YPL120W,Q02948,beclin 1,GO:0006914,pexophagy,core_autophagy_shared,True,PI3K complex (=ScATG6); shared with bulk autophagy
+VPS34,YLR240W,P22543,phosphatidylinositol 3-kinase VPS34,GO:0006914,pexophagy,core_autophagy_shared,True,class III PI3-kinase; shared with bulk autophagy
+VPS15,YBR097W,P22219,ubiquitin-binding S/T kinase VPS15,GO:0000425;GO:0006914,pexophagy,core_autophagy_shared,True,PI3K complex regulatory subunit; shared with bulk autophagy
+ATG10,YLL042C,Q07879,E2-like conjugating enzyme ATG10,GO:0006914,pexophagy,core_autophagy_shared,True,E2 for Atg12 conjugation; shared with bulk autophagy

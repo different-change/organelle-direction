@@ -1,0 +1,30 @@
+symbol,resolved_systematic_id,uniprot_id,gene_name,source_go_terms,module,submodule,shared_with_bulk_autophagy,notes
+SEC61,YLR378C,P32915,translocon subunit SEC61,GO:0005789;GO:0006616;GO:0031204,biogenesis,translocon_SEC61,False,Sec61 translocon central pore (alpha)
+SBH1,YER087C-B,P52870,Arf family guanine nucleotide exchange factor SBH1,GO:0005789;GO:0006616;GO:0031204,biogenesis,translocon_SEC61,False,Sec61 beta subunit (mygene name field mislabels as Arf-GEF; systematic ID YER087C-B correct; GO:0006616/0031204 confirm translocon)
+SSS1,YDR086C,P35179,translocon subunit SSS1,GO:0005789;GO:0006614;GO:0006616;GO:0031204,biogenesis,translocon_SEC61,False,Sec61 gamma subunit
+SEC62,YPL094C,P21825,Sec63 complex subunit SEC62,GO:0005789;GO:0031204,biogenesis,translocon_SEC62_63,False,Sec62/63 posttranslational translocon
+SEC63,YOR254C,P14906,protein-transporting protein SEC63,GO:0005789;GO:0006614;GO:0031204,biogenesis,translocon_SEC62_63,False,"Sec63 J-domain, recruits Kar2/BiP"
+SRP54,YPR088C,P20424,RNA-binding signal recognition particle subunit SRP54,GO:0006614;GO:0006616,biogenesis,SRP,False,signal recognition particle subunit (cotranslational ER targeting)
+SEC65,YML105C,P29478,RNA-binding signal recognition particle subunit SEC65,GO:0006614,biogenesis,SRP,False,signal recognition particle subunit (cotranslational ER targeting)
+SRP68,YPL243W,P38687,signal recognition particle subunit SRP68,GO:0006614,biogenesis,SRP,False,signal recognition particle subunit (cotranslational ER targeting)
+SRP72,YPL210C,P38688,signal recognition particle subunit SRP72,GO:0005789;GO:0006614,biogenesis,SRP,False,signal recognition particle subunit (cotranslational ER targeting)
+SRP21,YKL122C,P32342,signal recognition particle subunit SRP21,GO:0006614,biogenesis,SRP,False,signal recognition particle subunit (cotranslational ER targeting)
+SRP101,YDR292C,P32916,signal recognition particle receptor subunit alpha,GO:0005789;GO:0006614;GO:0045047,biogenesis,SRP_receptor,False,SRP receptor subunit at ER membrane (alpha/beta)
+SRP102,YKL154W,P36057,Signal recognition particle receptor subunit beta,GO:0005789;GO:0045047,biogenesis,SRP_receptor,False,SRP receptor subunit at ER membrane (alpha/beta)
+OST1,YJL002C,P41543,dolichyl-diphosphooligosaccharide--protein glycotransferase subunit OST1,GO:0005789;GO:0006487;GO:0008250,biogenesis,OST,False,"oligosaccharyltransferase subunit (N-linked glycosylation, ER lumen)"
+OST2,YOR103C,P46964,dolichyl-diphosphooligosaccharide-protein glycotransferase,GO:0005789;GO:0006487;GO:0008250,biogenesis,OST,False,"oligosaccharyltransferase subunit (N-linked glycosylation, ER lumen)"
+OST3,YOR085W,P48439,dolichyl-diphosphooligosaccharide--protein glycotransferase OST3,GO:0005789;GO:0006487;GO:0008250,biogenesis,OST,False,"oligosaccharyltransferase subunit (N-linked glycosylation, ER lumen)"
+OST4,YDL232W,Q99380,olichyl-diphosphooligosaccharide--protein glycotransferase OST4,GO:0005789;GO:0006487;GO:0008250,biogenesis,OST,False,"oligosaccharyltransferase subunit (N-linked glycosylation, ER lumen)"
+OST5,YGL226C-A,Q92316,dolichyl-diphosphooligosaccharide--protein glycotransferase subunit,GO:0005789;GO:0006487;GO:0008250,biogenesis,OST,False,"oligosaccharyltransferase subunit (N-linked glycosylation, ER lumen)"
+OST6,YML019W,Q03723,dolichyl-diphosphooligosaccharide--protein glycotransferase,GO:0005789;GO:0006487;GO:0008250,biogenesis,OST,False,"oligosaccharyltransferase subunit (N-linked glycosylation, ER lumen)"
+STT3,YGL022W,P39007,dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit STT3,GO:0005789;GO:0006487;GO:0008250,biogenesis,OST,False,"oligosaccharyltransferase subunit (N-linked glycosylation, ER lumen)"
+WBP1,YEL002C,P33767,dolichyl-diphosphooligosaccharide-protein glycotransferase,GO:0005789;GO:0006487;GO:0008250,biogenesis,OST,False,"oligosaccharyltransferase subunit (N-linked glycosylation, ER lumen)"
+SWP1,YMR149W,Q02795,dolichyl-diphosphooligosaccharide-protein glycotransferase,GO:0005789;GO:0006487;GO:0008250,biogenesis,OST,False,"oligosaccharyltransferase subunit (N-linked glycosylation, ER lumen)"
+KAR2,YJL034W,P16474,Hsp70 family ATPase KAR2,GO:0005789;GO:0006616;GO:0006986;GO:0030968;GO:0031204,biogenesis,ER_chaperone_folding,False,BiP/Kar2 Hsp70 ER lumenal chaperone
+PDI1,YCL043C,P17967,protein disulfide isomerase PDI1,GO:0006457,biogenesis,ER_chaperone_folding,False,protein disulfide isomerase
+LHS1,YKL073W,P36016,Hsp70 family chaperone LHS1,GO:0006986;GO:0031204,biogenesis,ER_chaperone_folding,False,Hsp70 lumenal chaperone (Kar2 partner)
+IRE1,YHR079C,P32361,bifunctional endoribonuclease/protein kinase IRE1,GO:0005789;GO:0030968;GO:0036498,biogenesis,UPR_sensor_machinery,False,IRE1 ER-membrane sensor kinase/endoribonuclease — conserved UPR MACHINERY (splices HAC1 mRNA); retained. HAC1 effector TF dropped (see provenance).
+INO1,YJL153C,P11986,inositol-3-phosphate synthase INO1,GO:0006021,biogenesis,lipid_membrane_biogenesis,False,inositol-3-P synthase (phospholipid precursor; UPR target)
+OPI3,YJR073C,P05375,bifunctional phosphatidyl-N-methylethanolamine N-methyltransferase/phosphatidyl-N-dimethylethanolamine N-methyltransferase,GO:0005789;GO:0006656,biogenesis,lipid_membrane_biogenesis,False,phospholipid N-methyltransferase (PC synthesis)
+CHO2,YGR157W,P05374,phosphatidylethanolamine N-methyltransferase,GO:0005789;GO:0006656,biogenesis,lipid_membrane_biogenesis,False,PE N-methyltransferase (PC synthesis)
+ACC1,YNR016C,Q00955,acetyl-CoA carboxylase ACC1,GO:0005789;GO:0006633,biogenesis,lipid_membrane_biogenesis,False,acetyl-CoA carboxylase (fatty-acid/membrane lipid supply)

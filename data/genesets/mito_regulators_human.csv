@@ -1,0 +1,8 @@
+symbol,resolved_systematic_id,uniprot_id,gene_name,source_go_terms,module,submodule,shared_with_bulk_autophagy,notes
+PPARGC1A,ENSG00000109819,Q9UBK2,PPARG coactivator 1 alpha,GO:0007005,regulator,master_transcriptional,False,
+PPARGC1B,ENSG00000155846,Q86YN6,PPARG coactivator 1 beta,,regulator,master_transcriptional,False,
+NRF1,ENSG00000106459,Q16656,nuclear respiratory factor 1,GO:0003700;GO:0006357,regulator,master_transcriptional,False,
+TFAM,ENSG00000108064,Q00059,"transcription factor A, mitochondrial",GO:0006390,regulator,master_transcriptional,False,
+ESRRA,ENSG00000173153,P11474,estrogen related receptor alpha,GO:0003700;GO:0006357,regulator,master_transcriptional,False,
+GABPA,ENSG00000154727,Q06546,GA binding protein transcription factor subunit alpha,GO:0003700;GO:0006357,regulator,master_transcriptional,False,
+NFE2L2,ENSG00000116044,Q16236,NFE2 like bZIP transcription factor 2,GO:0003700;GO:0006357,regulator,master_transcriptional,False,

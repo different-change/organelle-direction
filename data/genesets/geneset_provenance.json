@@ -1,0 +1,174 @@
+{
+  "geneset_name": "peroxisome_directional_dynamics_modules",
+  "version": "1.0.0",
+  "created_utc": "2026-07-10T03:21:20.870527Z",
+  "project": "Directional peroxisome-dynamics score (organellomics; Hickey/Nazarov/Smertenko Plant Physiol 2023)",
+  "phase": "Phase 0 - gene module definition only (no expression analysis)",
+  "design_note": "Directional score = biogenesis module score - degradation(pexophagy) module score. Two cleanly separated modules per organism.",
+  "organisms": {
+    "yeast": {
+      "name": "Saccharomyces cerevisiae S288C",
+      "taxid": 559292,
+      "id_namespace": "SGD systematic ORF (e.g. YDR265W)"
+    },
+    "arabidopsis": {
+      "name": "Arabidopsis thaliana",
+      "taxid": 3702,
+      "id_namespace": "TAIR/AGI locus (e.g. AT3G47430)"
+    }
+  },
+  "go_terms_used": {
+    "biogenesis": {
+      "GO:0007031": "peroxisome organization",
+      "GO:0016558": "protein import into peroxisome matrix",
+      "GO:0016560": "protein import into peroxisome matrix, docking",
+      "GO:0016562": "protein import into peroxisome matrix, receptor recycling",
+      "GO:0045046": "protein import into peroxisome membrane",
+      "GO:0072662": "protein localization to peroxisome",
+      "GO:0016559": "peroxisome fission",
+      "GO:0045033": "peroxisome inheritance",
+      "GO:0032581": "ER-dependent peroxisome organization",
+      "GO:0006625": "protein targeting to peroxisome"
+    },
+    "degradation": {
+      "GO:0030242": "autophagy of peroxisome (pexophagy)",
+      "GO:0000425": "pexophagy",
+      "GO:0000426": "micropexophagy",
+      "GO:0006914": "macroautophagy (bulk - flags shared core autophagy machinery)"
+    }
+  },
+  "resolver_services": {
+    "gene_resolution": "mygene.info via genes-ontologies MCP (query_genes; yeast ensembl.gene=SGD ORF, arabidopsis ensembl.gene=AGI)",
+    "go_membership": "mygene.info GO scope enumeration + QuickGO get_go_annotations (genes-ontologies MCP)",
+    "go_term_metadata": "EBI OLS4 (genes-ontologies MCP get_ontology_term)",
+    "uniprot": "UniProtKB via genes-ontologies MCP get_uniprot_entries",
+    "orthology": "Ensembl Compara pan-homology via genes REST (genomes MCP ensembl_homology), Arabidopsis->S.cerevisiae direction (cross-kingdom Compara only reachable from the plant side)"
+  },
+  "literature_anchors_pmids": {
+    "biogenesis_peroxins_review": [
+      "39851575",
+      "36117327",
+      "33417206",
+      "33417203"
+    ],
+    "pex11_proliferation": [],
+    "denovo_membrane": [
+      "26408931",
+      "26381541"
+    ],
+    "pexophagy_atg36": [
+      "35404228",
+      "32958557",
+      "31007124",
+      "30859155"
+    ],
+    "pexophagy_atg30_pichia": [
+      "37049804",
+      "31007124",
+      "29260977",
+      "25694426"
+    ],
+    "pexophagy_review": [
+      "42418178",
+      "42383423",
+      "42381569",
+      "42318785"
+    ],
+    "oleate_control": [
+      "22808036",
+      "20977884",
+      "20139423",
+      "19830909"
+    ],
+    "nstarv_pexophagy": [
+      "41307997",
+      "38834954",
+      "36825558",
+      "16874081"
+    ],
+    "arabidopsis_pex11_family": [
+      "20195524",
+      "19734083",
+      "19704562",
+      "17220199"
+    ],
+    "pex_ubiquitination_degradation": []
+  },
+  "positive_controls_for_downstream_validation": {
+    "biogenesis_UP": "oleate/oleic-acid induction -> peroxisome proliferation (S. cerevisiae). PMIDs: 22808036,20977884,20139423,19830909",
+    "degradation_UP": "nitrogen starvation -> pexophagy (S. cerevisiae). PMIDs: 41307997,38834954,36825558,16874081"
+  },
+  "counts_per_module": {
+    "yeast_biogenesis": 30,
+    "yeast_pexophagy": 20,
+    "arabidopsis_biogenesis": 26,
+    "arabidopsis_pexophagy": 17
+  },
+  "submodule_breakdown": {
+    "yeast_biogenesis": {
+      "import": 12,
+      "fission": 9,
+      "ubiquitination": 5,
+      "denovo": 2,
+      "inheritance": 2
+    },
+    "yeast_pexophagy": {
+      "core_autophagy_shared": 18,
+      "receptor": 2
+    },
+    "arabidopsis_biogenesis": {
+      "fission": 10,
+      "import": 7,
+      "ubiquitination": 5,
+      "denovo": 4
+    },
+    "arabidopsis_pexophagy": {
+      "core_autophagy_shared": 16,
+      "receptor": 1
+    }
+  },
+  "collision_and_qc_flags": [
+    "ATG30 / ATG37: confirmed ABSENT in S. cerevisiae (Pichia pastoris-specific pexophagy receptor/factor). S. cerevisiae uses ATG36 (YJL185C) as the pexophagy receptor. Resolved by species-restricted query (taxid 559292 not_found list).",
+    "ATG6 (yeast) resolves to VPS30/YPL120W (Beclin homolog) - alias, not a distinct gene. Recorded under systematic ID YPL120W.",
+    "Arabidopsis FIS1A symbol resolves to community name BIGYIN (AT3G57090) - same gene, kept as FIS1A for cross-organism clarity.",
+    "Arabidopsis ATG5/ATG2/ATG6 symbol searches returned alias collisions to a co-located AT3G518xx cluster (SAC8 AT3G51830, ACX4=acyl-CoA oxidase AT3G51840, metallopeptidase AT3G51800, G1 AT3G51790). All rejected; correct autophagy genes selected by MyGene name field + GO annotation (ATG5=AT5G17290, ATG2=AT3G19190, ATG6=AT3G61710).",
+    "Arabidopsis DRP5B/ARC5 (AT3G19720): Ensembl Compara pan-homology returned YOR211C, which is MGM1 (a MITOCHONDRIAL dynamin), not a peroxisomal DNM1 ortholog. Flagged spurious; DRP5B recorded as plant-specific peroxisome+chloroplast division dynamin with ortholog_confidence=none.",
+    "yeast peroxisome-organization GO term (GO:0007031) also enumerated regulators ADR1, PIP2 (and OAF-type factors) - these are transcriptional regulators and were DROPPED (see dropped_genes).",
+    "APEM9 (AT3G10572): Arabidopsis functional analog of the Pex1/Pex6 membrane anchor (ScPEX15 / mammalian PEX26); no clean Compara call, GO:0007031 assigned by TAIR curation.",
+    "Arabidopsis PEX7 (AT1G29260): Ensembl Compara pan-homology returned only non-PEX WD40 proteins (YDR030C/YEL056W), so ortholog_of was assigned to yeast PEX7 (YDR142C) by conserved family + shared GO (PTS2 receptor), ortholog_confidence=medium. YDR142C IS present in the yeast biogenesis file."
+  ],
+  "dropped_genes": [
+    {
+      "gene": "ADR1 (yeast, YDR216W)",
+      "reason": "transcriptional activator of oleate/peroxisome genes; a REGULATOR not machinery. Appears in GO:0007031 but excluded per machinery-conserves/regulators-diverge rule; no ortholog transfer to Arabidopsis."
+    },
+    {
+      "gene": "PIP2/OAF1 (yeast)",
+      "reason": "oleate-responsive transcription factors (Pip2-Oaf1 complex); lineage-specific regulators with no Arabidopsis ortholog transfer. Dropped from both organisms."
+    },
+    {
+      "gene": "ATG30 / ATG37 (Pichia)",
+      "reason": "Pichia pastoris-specific pexophagy factors; absent in S. cerevisiae. Not applicable to this yeast module."
+    },
+    {
+      "gene": "ATG14 (Arabidopsis)",
+      "reason": "No Arabidopsis ortholog found (plants lack a clear ATG14/Barkor); yeast ATG14 exists but its plant partner is absent, so not transferred. Yeast ATG14 also left out of the yeast pexophagy set to avoid an unpaired-across-organism gene."
+    },
+    {
+      "gene": "Arabidopsis-only regulators (e.g. peroxin transcriptional regulators)",
+      "reason": "Not enumerated; module restricted to conserved machinery per cross-taxa rule."
+    },
+    {
+      "gene": "PEX16, DRP5B, ATG101 (Arabidopsis)",
+      "reason": "kept as conserved/plant-specific machinery but carry ortholog_confidence=none: S. cerevisiae lacks PEX16 and ATG101; DRP5B is a plant-specific peroxisome+chloroplast-division dynamin. NOTE: ATG10 is NOT in this group - it DOES have a yeast ortholog (YLL042C, ortholog_confidence=medium)."
+    }
+  ],
+  "cross_taxa_method": "Machinery conserves, regulators diverge. Only conserved MACHINERY mapped yeast<->Arabidopsis. Each Arabidopsis gene carries ortholog_of (yeast systematic ID), ortholog_method (ensembl_compara_pan_homology | conserved_family_GO), ortholog_confidence (high=Compara 1:1, medium=Compara 1:many OR conserved family+GO, none=plant-specific/no yeast ortholog), and ortholog_evidence string.",
+  "notes_on_weak_arm": "The pexophagy module's core_autophagy_shared genes (ATG1/8/7/3/5/12/9/2/18, PI3K complex, ATG11) OVERLAP bulk autophagy and are flagged shared_with_bulk_autophagy=True. Only ATG36 (yeast) is a peroxisome-selective receptor. This is the acknowledged weak arm of the directional score; downstream scoring should weight the selective receptor(s) and PEX-ubiquitination signal, not treat shared-autophagy genes as peroxisome-specific. NOTE: shared_with_bulk_autophagy strictly marks bulk-autophagy overlap (core_autophagy_shared + ATG11). Peroxisome fission genes (FIS1A/B, DRP3A/B, DRP5B in Arabidopsis; FIS1, DNM1, MDV1, CAF4 in yeast) are shared with MITOCHONDRIAL fission, NOT bulk autophagy, so they carry shared_with_bulk_autophagy=False in BOTH organism tables; their mitochondrial-fission sharing is documented in the notes column instead.",
+  "files": [
+    "peroxisome_biogenesis_yeast.csv",
+    "peroxisome_pexophagy_yeast.csv",
+    "peroxisome_biogenesis_arabidopsis.csv",
+    "peroxisome_pexophagy_arabidopsis.csv"
+  ]
+}

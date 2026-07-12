@@ -1,0 +1,27 @@
+symbol,resolved_systematic_id,uniprot_id,source_go_terms,module,submodule,shared_with_bulk_autophagy,notes
+ATG7,AT5G45900,Q94CD5,GO:0000045;GO:0000423;GO:0006914;GO:0010150;GO:0034727,degradation,core_autophagy_shared,True,
+ATG5,AT5G17290,Q9FFI2,GO:0000045;GO:0000423;GO:0006914;GO:0010150;GO:0034727,degradation,core_autophagy_shared,True,
+ATG11,AT4G30790,Q9SUG7,GO:0000045;GO:0006914;GO:0010150;GO:0034727,degradation,core_autophagy_shared,True,ATG11: selective-autophagy scaffold; shared across selective/bulk autophagy (not chloroplast-specific).
+ATG101,AT5G66930,F4K265,GO:0000045;GO:0006914,degradation,core_autophagy_shared,True,
+ATG8A,AT4G21980,Q8LEM4,GO:0000045;GO:0000423;GO:0006914,degradation,core_autophagy_shared,True,
+ATG8E,AT2G45170,Q8S926,GO:0000045;GO:0000423,degradation,core_autophagy_shared,True,
+ATG8F,AT4G16520,Q8VYK7,GO:0000045;GO:0000423,degradation,core_autophagy_shared,True,
+ATG8H,AT3G06420,Q8S925,GO:0000045;GO:0000423,degradation,core_autophagy_shared,True,
+ATG8I,AT3G15580,Q9LRP7,GO:0000045;GO:0000423;GO:0006914,degradation,core_autophagy_shared,True,
+ATG4A,AT2G44140,Q8S929,GO:0000045;GO:0000423;GO:0034727,degradation,core_autophagy_shared,True,
+ATG4B,AT3G59950,Q9M1Y0,GO:0000045;GO:0000423;GO:0034727,degradation,core_autophagy_shared,True,
+ATG3,AT5G61500,Q0WWQ1,GO:0000045;GO:0006914,degradation,core_autophagy_shared,True,
+ATG9,AT2G31260,Q8RUS5,GO:0000423;GO:0006914;GO:0034727,degradation,core_autophagy_shared,True,
+ATG6,AT3G61710,Q9M367,GO:0000045;GO:0000423;GO:0006914,degradation,core_autophagy_shared,True,
+ATG12A,AT1G54210,Q8S924,GO:0000045;GO:0006914;GO:0034727,degradation,core_autophagy_shared,True,
+ATG18A,AT3G62770,Q93VB2,GO:0006914;GO:0009651;GO:0010150,degradation,core_autophagy_shared,True,
+ATG13A,AT3G49590,F4IXZ6,GO:0000045;GO:0006914,degradation,core_autophagy_shared,True,
+ATG13B,AT3G18770,F4J8V5,GO:0000045;GO:0000423;GO:0006914;GO:0034727,degradation,core_autophagy_shared,True,
+VPS34,AT1G60490,P42339,GO:0000045;GO:0009651,degradation,core_autophagy_shared,True,
+ATI1,AT2G45980,O82775,,degradation,chlorophagy_selective_candidate,False,"ATI1: ATG8-interacting plastid-associated protein; associates with plastid-derived ATI bodies in senescence/starvation. LOW-confidence chlorophagy-selective candidate; membership literature-based, not GO-confirmed for chlorophagy. Membership literature-based (no chlorophagy GO seed hit)."
+ATI2,AT4G00355,Q8VY98,,degradation,chlorophagy_selective_candidate,False,ATI2: ATI1 paralog; plastid-associated ATG8-interacting. LOW-confidence chlorophagy-selective candidate; literature-based. Membership literature-based (no chlorophagy GO seed hit).
+CV,AT2G25625,Q8S8K8,GO:0010150,degradation,chlorophagy_selective_candidate,False,"CV (Chloroplast Vesiculation): UniProt Q8S8K8 'Protein CHLOROPLAST VESICULATION'; MCP GO:1904821 chloroplast disassembly, GO:0097708 intracellular vesicle, GO:0005773 vacuole, GO:0009941 chloroplast envelope, GO:0010150 leaf senescence. Stress/senescence-induced ATG-independent vacuolar route. NOTE: Ensembl/NCBI 'histone deacetylase-like' description is a misannotation (resolved via UniProt). MEDIUM confidence chloroplast-selective candidate."
+PUB4,AT2G23140,O22193,GO:0004842;GO:0016567,degradation,chlorophagy_selective_candidate,False,PUB4: U-box E3 ligase implicated in chloroplast quality-control / damaged-chloroplast turnover. Selective-degradation candidate; LOW-MEDIUM confidence.
+SP1,AT1G63900,Q8L7N4,GO:0004842;GO:0016567,degradation,chlorad_selective,False,"SP1: RING-type E3 ubiquitin ligase (UniProt Q8L7N4 'E3 ubiquitin-protein ligase SP1 / SUPPRESSOR OF PPI1 LOCUS 1'). CHLORAD pathway — ubiquitinates the TOC import apparatus for proteasomal turnover (GO:0016567 + GO:0045037 chloroplast import, MCP-confirmed). Mechanism is ubiquitin-proteasome ENVELOPE degradation, NOT ATG8 vacuolar chlorophagy. CROSS-ORGANELLE: MCP GO:0016558 confirms SP1 also acts in peroxisome matrix import/biogenesis. MEDIUM confidence as chloroplast-selective."
+SP2,AT3G44160,Q5PP51,,degradation,chlorad_selective,False,"SP2: UniProt Q5PP51 'SUPPRESSOR OF PPI1 LOCUS 2, chloroplastic / OEP39'; Omp85-family channel (GO:0015267) exporting ubiquitinated substrates in CHLORAD retrotranslocation (GO:0031625 ubiquitin-ligase binding, GO:0030162 proteolysis, GO:0009507 chloroplast — MCP-confirmed). Selective (CHLORAD), proteasome-linked. MEDIUM confidence."
+SPL2,AT1G54150,Q9SYH3,GO:0004842;GO:0016567,degradation,chlorad_selective,False,SPL2 (SP1-like 1/2): SP1 paralog RING E3 in CHLORAD. Selective (CHLORAD). LOW-MEDIUM confidence; MCP UniProt Q9SYH3 'E3 ubiquitin-protein ligase SPL2 / SP1-like protein 2'.

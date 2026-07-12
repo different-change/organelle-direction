@@ -1,0 +1,28 @@
+symbol,resolved_systematic_id,uniprot_id,source_go_terms,module,submodule,shared_with_bulk_autophagy,ortholog_of,ortholog_of_symbol,ortholog_method,ortholog_confidence,ortholog_evidence,notes
+TOM20-2,AT1G27390,P82873,GO:0030150;GO:0045040,biogenesis,import_TOM,False,YGR082W,TOM20,conserved_family_GO,medium,tair_curated_symbol_ortholog_no_compara,TOM outer-membrane import receptor
+TOM20-3,AT3G27080,P82874,GO:0030150;GO:0045040,biogenesis,import_TOM,False,YGR082W,TOM20,conserved_family_GO,medium,tair_curated_symbol_ortholog_no_compara,TOM outer-membrane import receptor
+TOM20-4,AT5G40930,P82805,GO:0030150;GO:0045040,biogenesis,import_TOM,False,YGR082W,TOM20,conserved_family_GO,medium,tair_curated_symbol_ortholog_no_compara,TOM outer-membrane import receptor
+TOM40,AT3G20000,,GO:0030150;GO:0045040,biogenesis,import_TOM,False,YMR203W,TOM40,ensembl_compara_pan_homology,medium,ensembl_compara:ortholog_one2many->YMR203W,TOM channel (beta-barrel)
+TOM5,AT5G08040,Q9SD80,GO:0045040,biogenesis,import_TOM,False,YPR133W-A,TOM5,conserved_family_GO,medium,tair_curated_symbol_ortholog_no_compara,TOM small subunit
+TOM6,AT1G49410,Q9XIA7,GO:0030150;GO:0045040,biogenesis,import_TOM,False,YOR045W,TOM6,conserved_family_GO,medium,tair_curated_symbol_ortholog_no_compara,TOM small subunit
+TOM7-2,AT1G64220,Q3ECI7,GO:0030150;GO:0045040,biogenesis,import_TOM,False,YNL070W,TOM7,conserved_family_GO,medium,tair_curated_symbol_ortholog_no_compara,TOM small subunit
+TIM23-1,AT1G17530,Q9LNQ1,GO:0030150;GO:0045039,biogenesis,import_TIM23,False,YNR017W,TIM23,ensembl_compara_pan_homology,medium,ensembl_compara:ortholog_one2many->YNR017W,presequence translocase channel
+TIM23-2,AT1G72750,Q38820,GO:0030150;GO:0045039,biogenesis,import_TIM23,False,YNR017W,TIM23,ensembl_compara_pan_homology,medium,ensembl_compara:ortholog_one2many->YNR017W,presequence translocase channel
+TIM23-3,AT3G04800,Q9S837,GO:0030150;GO:0045039,biogenesis,import_TIM23,False,YNR017W,TIM23,ensembl_compara_pan_homology,medium,ensembl_compara:ortholog_one2many->YNR017W,presequence translocase channel
+TIM17-1,AT1G20350,Q9LN27,GO:0030150;GO:0045039,biogenesis,import_TIM23,False,YJL143W,TIM17,ensembl_compara_pan_homology,medium,ensembl_compara:ortholog_one2many->YJL143W,TIM23 channel subunit
+TIM17-2,AT2G37410,Q9SP35,GO:0030150;GO:0045039,biogenesis,import_TIM23,False,YJL143W,TIM17,ensembl_compara_pan_homology,medium,ensembl_compara:ortholog_one2many->YJL143W,TIM23 channel subunit
+TIM17-3,AT5G11690,Q9LYG1,GO:0030150;GO:0045039,biogenesis,import_TIM23,False,YJL143W,TIM17,ensembl_compara_pan_homology,medium,ensembl_compara:ortholog_one2many->YJL143W,TIM23 channel subunit
+TIM50,AT1G55900,Q8VYE2,GO:0030150;GO:0045039,biogenesis,import_TIM23,False,YPL063W,TIM50,ensembl_compara_pan_homology,high,ensembl_compara:ortholog_one2one->YPL063W,TIM23 receptor/gatekeeper
+TIM44-1,AT2G20510,Q1PF33,GO:0030150,biogenesis,import_PAM,False,YIL022W,TIM44,ensembl_compara_pan_homology,medium,ensembl_compara:ortholog_one2many->YIL022W,PAM motor membrane anchor
+TIM44-2,AT2G36070,Q5XF06,GO:0030150,biogenesis,import_PAM,False,YIL022W,TIM44,ensembl_compara_pan_homology,medium,ensembl_compara:ortholog_one2many->YIL022W,PAM motor membrane anchor
+PAM16-like,AT3G59280,Q93VV9,GO:0030150,biogenesis,import_PAM,False,YJL104W,PAM16,ensembl_compara_pan_homology,medium,ensembl_compara:ortholog_one2many->YJL104W,PAM J-like regulatory subunit (Tim16)
+MGE1-like,AT4G26780,Q8LB47,GO:0030150,biogenesis,import_PAM,False,YOR232W,MGE1,ensembl_compara_pan_homology,medium,ensembl_compara:ortholog_one2many->YOR232W,mtHsp70 nucleotide exchange factor
+MGE1,AT5G55200,Q9FLP3,GO:0030150,biogenesis,import_PAM,False,YOR232W,MGE1,ensembl_compara_pan_homology,medium,ensembl_compara:ortholog_one2many->YOR232W,mtHsp70 nucleotide exchange factor
+mtHsc70-1,AT4G37910,Q8GUM2,GO:0030150,biogenesis,import_PAM,False,YJR045C,SSC1,ensembl_compara_pan_homology,medium,ensembl_compara:ortholog_many2many->YJR045C,matrix mtHsp70 import motor
+MTHSC70-2,AT5G09590,Q9LDZ0,GO:0030150,biogenesis,import_PAM,False,YJR045C,SSC1,ensembl_compara_pan_homology,medium,ensembl_compara:ortholog_many2many->YJR045C,matrix mtHsp70 import motor
+MIA40,AT5G23395,Q8GYJ4,GO:0045041;GO:0160203,biogenesis,import_MIA,False,YKL195W,MIA40,ensembl_compara_pan_homology,high,ensembl_compara:ortholog_one2one->YKL195W,MIA disulfide-relay oxidoreductase
+Erv1,AT1G49880,Q8GXX0,GO:0045041;GO:0160203,biogenesis,import_MIA,False,YGR029W,ERV1,ensembl_compara_pan_homology,high,ensembl_compara:ortholog_one2one->YGR029W,MIA sulfhydryl oxidase
+DRP3B,AT2G14120,Q8LFT2,GO:0000266;GO:0000423;GO:0007005,biogenesis,fission,False,YLL001W,DNM1,ensembl_compara_pan_homology,medium,ensembl_compara:ortholog_one2many->YLL001W,fission dynamin; SHARED with peroxisome division
+DRP3A,AT4G33650,Q8S944,GO:0000266;GO:0000423;GO:0007005,biogenesis,fission,False,YLL001W,DNM1,ensembl_compara_pan_homology,medium,ensembl_compara:ortholog_one2many->YLL001W,fission dynamin; SHARED with peroxisome division
+BIGYIN,AT3G57090,Q9M1J1,GO:0000266,biogenesis,fission,False,YIL065C,FIS1,ensembl_compara_pan_homology,medium,ensembl_compara:ortholog_one2many->YIL065C,fission receptor; SHARED with peroxisome division
+FIS1B,AT5G12390,Q94CK3,GO:0000266,biogenesis,fission,False,YIL065C,FIS1,ensembl_compara_pan_homology,medium,ensembl_compara:ortholog_one2many->YIL065C,fission receptor; SHARED with peroxisome division

@@ -1,0 +1,5 @@
+accession,system,platform,perturbation,arm_role,n_per_arm,pmid,matrix,namespace
+GSE168534,HUVEC (primary umbilical vein endothelial),Illumina NovaSeq 6000,ferric ammonium citrate 100uM 30h,biogenesis/storage POSITIVE CONTROL (iron loading),3,,GSE168534_TMM_normalized_reads_count_per_million_Ctrl_FAC.txt.gz,symbol
+GSE186655,HepG2 (hepatocyte),Illumina HiSeq 2500,ferric ammonium citrate (FAC) vs DMSO; 8HQ is IONOPHORE not chelator (per PMID36512269),biogenesis/storage replication (iron loading),3,36512269.0,GSE186655_processed_data_file.xlsx,symbol
+GSE314015,human coronary artery EC + dermal lymphatic EC,Illumina (GPL34284),deferoxamine 100uM 24h (iron chelation/depletion),ferritinophagy candidate POSITIVE CONTROL (chelation) - NCOA4 mRNA flat -> NOT validatable,3,,GSE314015_NormalizedCounts.csv.gz,ensembl
+GSE192400,THP-1 macrophages,Illumina NextSeq 500,deferoxamine vs ferric ammonium citrate (no vehicle arm),supporting DFO-vs-FAC contrast (not within-vehicle scored),3,,GSE192400_gene_count_matrix.csv.gz,ensembl

@@ -1,0 +1,116 @@
+{
+ "geneset_name": "endoplasmic_reticulum_directional_dynamics_modules",
+ "version": "1.0.0",
+ "created_utc": "2026-07-10T18:04:45.201373+00:00",
+ "project": "Directional organelle-dynamics platform (organellomics; Hickey/Nazarov/Smertenko Plant Physiol 2023) \u2014 vertical #3 ENDOPLASMIC RETICULUM",
+ "phase": "Vertical #3 gene module definition + validation",
+ "design_note": "Directional score = biogenesis module score - degradation(ER-phagy) module score, plus a SELECTIVE degradation sub-score built only from the ER-selective receptor genes Atg39/Atg40. Like the mitochondrion vertical (Atg32) and unlike the peroxisome plant transfer (no ATG36 ortholog), ER-phagy HAS genuine selective receptors (Atg39 perinuclear/nuclear-ER; Atg40 cortical ER; Mochida 2015 Nature), so the SELECTIVE degradation arm is populated and testable here \u2014 another closed-arm case demonstrating the clearance arm is trustworthy when a real receptor exists.",
+ "organisms": {
+  "yeast": {
+   "name": "Saccharomyces cerevisiae S288C",
+   "taxid": 559292,
+   "id_namespace": "SGD systematic ORF (e.g. YLR312C)"
+  }
+ },
+ "go_terms_used": {
+  "biogenesis": {
+   "GO:0006614": "SRP-dependent cotranslational protein targeting to membrane",
+   "GO:0006616": "SRP-dependent cotransl. protein targeting, translocation",
+   "GO:0045047": "protein targeting to ER",
+   "GO:0031204": "posttranslational protein targeting to membrane, translocation",
+   "GO:0006487": "protein N-linked glycosylation",
+   "GO:0008250": "oligosaccharyltransferase complex",
+   "GO:0006457": "protein folding",
+   "GO:0006986": "response to unfolded protein",
+   "GO:0030968": "ER unfolded protein response (UPR)",
+   "GO:0036498": "IRE1-mediated unfolded protein response",
+   "GO:0006656": "phosphatidylcholine biosynthetic process",
+   "GO:0006021": "inositol biosynthetic process",
+   "GO:0006633": "fatty acid biosynthetic process",
+   "GO:0005789": "endoplasmic reticulum membrane"
+  },
+  "degradation": {
+   "GO:0061709": "reticulophagy (ER-phagy)",
+   "GO:0006914": "macroautophagy (bulk \u2014 flags shared core autophagy machinery)",
+   "GO:0000045": "autophagosome assembly (bulk)"
+  }
+ },
+ "resolver_services": {
+  "gene_resolution": "mygene.info via genes-ontologies MCP (query_genes; scopes=symbol,alias; species=559292; SGD systematic + Swiss-Prot returned)",
+  "go_membership": "QuickGO get_go_annotations (genes-ontologies MCP); per-gene distinct GO IDs intersected with the seed ER term set to CONFIRM membership rather than hand-assign",
+  "literature": "PubMed (mcp-pubmed) for receptor confirmation"
+ },
+ "literature_anchors_pmids": {
+  "atg39_atg40_erphagy_nucleophagy_receptors": [
+   "26040717"
+  ],
+  "reticulophagy_review": [
+   "26566146"
+  ]
+ },
+ "counts_per_module": {
+  "biogenesis": 29,
+  "degradation_erphagy": 10,
+  "degradation_selective_atg39_atg40": 2
+ },
+ "submodule_breakdown": {
+  "biogenesis": {
+   "translocon_SEC61": 3,
+   "translocon_SEC62_63": 2,
+   "SRP": 5,
+   "SRP_receptor": 2,
+   "OST": 9,
+   "ER_chaperone_folding": 3,
+   "UPR_sensor_machinery": 1,
+   "lipid_membrane_biogenesis": 4
+  },
+  "degradation": {
+   "receptor_selective": 2,
+   "scaffold": 1,
+   "core_autophagy_shared": 7
+  }
+ },
+ "selective_arm_design": "degradation_selective_ids = ATG39 (YLR312C) + ATG40 (YOR152C), the two ER-phagy receptors with shared_with_bulk_autophagy=False. Both carry GO:0061709 (reticulophagy). This is the ER analogue of Atg32/Atg33 in the mitochondrion vertical \u2014 a genuine selective-receptor arm, in contrast to the empty pexophagy arm of the Arabidopsis peroxisome transfer.",
+ "collision_and_qc_flags": [
+  "SBH1 (YER087C-B): mygene 'name' field returns 'Arf family guanine nucleotide exchange factor' \u2014 a mislabel. SBH1 is the Sec61 beta subunit; systematic ID YER087C-B and GO:0006616/GO:0031204 (translocon) confirm the correct identity. Kept as translocon; name annotation flagged.",
+  "OST2 (YOR103C) and SWP1/OST6/WBP1 mygene names truncate to generic 'glycotransferase' strings; systematic IDs and GO:0008250 (OST complex) confirm identity."
+ ],
+ "dropped_genes": {
+  "HAC1 (YFL031W)": "UPR effector transcription factor (bZIP). Its mRNA is regulated by IRE1-mediated splicing, not by abundance, and it is a lineage-specific transcriptional regulator, not conserved structural biogenesis machinery. Dropped per the cross-taxa / regulator rule established in the peroxisome and mitochondrion verticals (which dropped PEX regulators and HAP2/3/4/5). IRE1 \u2014 the conserved ER-membrane sensor kinase/RNase \u2014 is retained as machinery."
+ },
+ "mrna_proxy_caveat": "Transcript abundance is a proxy. A positive net_direction is 'consistent with a shift toward ER biogenesis/expansion'; elevated degradation/selective scores are 'consistent with a shift toward ER clearance (ER-phagy)'. These are NOT organelle turnover rates. Additionally, ER 'abundance' is a fuzzier concept than a countable organelle \u2014 the ER is a continuous membrane network, so module scores index the biosynthetic/clearance PROGRAM, not a copy number.",
+ "files": {
+  "biogenesis": "er_biogenesis_yeast.csv",
+  "degradation": "er_erphagy_yeast.csv",
+  "scores": "er_scores.csv",
+  "validation_notes": "er_validation_notes.md",
+  "validation_figure": "er_validation.png"
+ },
+ "literature_verification_note": "Atg39/Atg40 as ER-phagy receptors confirmed via PubMed (Mochida et al., Nature 2015, PMID 26040717).",
+ "positive_controls_validation_results": {
+  "method": "CPM-normalized then method='zscore', n_perm=2000; rank cross-check agrees on direction",
+  "control_A_biogenesis_tunicamycin_GSE260735": {
+   "contrast": "tunicamycin 0h vs 4h",
+   "n": "2 vs 2",
+   "biogenesis_mean_ctrl": -0.402,
+   "biogenesis_mean_treat": 0.402,
+   "welch_p": 0.026,
+   "cohen_d": 12.85,
+   "passed": true
+  },
+  "control_B_erphagy_rapamycin_GSE149016": {
+   "contrast": "growing vs rapamycin 1/2/3h",
+   "n": "2 vs 3",
+   "selective_receptor": "Atg39(YLR312C)/Atg40(YOR152C)",
+   "selective_mean_ctrl": -1.219,
+   "selective_mean_treat": 0.813,
+   "selective_welch_p": 0.0008,
+   "selective_cohen_d": 46.3,
+   "total_erphagy_welch_p": 0.042,
+   "biogenesis_unchanged_p": 0.37,
+   "passed": true,
+   "selective_passed": true
+  },
+  "coverage": "29/29 biogenesis, 10/10 ER-phagy, 2/2 Atg39/Atg40-selective in both datasets"
+ }
+}

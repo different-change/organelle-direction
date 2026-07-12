@@ -1,0 +1,34 @@
+symbol,resolved_systematic_id,uniprot_id,gene_name,source_go_terms,module,submodule,shared_with_bulk_autophagy,notes
+TOM20,YGR082W,P35180,TOM complex receptor protein TOM20,GO:0030150;GO:0045040,biogenesis,import_TOM,False,TOM outer-membrane import receptor
+TOM22,YNL131W,P49334,Tom22p,GO:0030150;GO:0045040,biogenesis,import_TOM,False,TOM central receptor/organizer
+TOM40,YMR203W,P23644,TOM complex pore protein TOM40,GO:0030150;GO:0045040,biogenesis,import_TOM,False,TOM channel (beta-barrel)
+TOM70,YNL121C,P07213,protein channel TOM70,GO:0030150;GO:0045039;GO:0045040,biogenesis,import_TOM,False,TOM receptor for hydrophobic carriers
+TOM5,YPR133W-A,P80967,Tom5p,GO:0045040,biogenesis,import_TOM,False,TOM small subunit
+TOM6,YOR045W,P33448,Tom6p,GO:0030150;GO:0045040,biogenesis,import_TOM,False,TOM small subunit
+TOM7,YNL070W,P53507,Tom7p,GO:0030150;GO:0045040,biogenesis,import_TOM,False,TOM small subunit
+TIM23,YNR017W,P32897,protein transporter TIM23,GO:0030150;GO:0045039,biogenesis,import_TIM23,False,presequence translocase channel
+TIM17,YJL143W,P39515,protein transporter TIM17,GO:0030150;GO:0045039,biogenesis,import_TIM23,False,TIM23 channel subunit
+TIM50,YPL063W,Q02776,protein translocase subunit TIM50,GO:0030150;GO:0045039,biogenesis,import_TIM23,False,TIM23 receptor/gatekeeper
+TIM44,YIL022W,Q01852,protein translocase subunit TIM44,GO:0030150,biogenesis,import_PAM,False,PAM motor membrane anchor
+PAM16,YJL104W,P42949,import motor complex subunit PAM16,GO:0030150,biogenesis,import_PAM,False,PAM J-like regulatory subunit (Tim16)
+PAM18,YLR008C,Q07914,Pam18p,GO:0030150,biogenesis,import_PAM,False,PAM J-protein co-chaperone (Tim14)
+MGE1,YOR232W,P38523,mitochondrial nucleotide exchange factor MGE1,GO:0030150,biogenesis,import_PAM,False,mtHsp70 nucleotide exchange factor
+SSC1,YJR045C,P0CS90,Hsp70 family ATPase SSC1,GO:0030150,biogenesis,import_PAM,False,matrix mtHsp70 import motor
+TIM22,YDL217C,Q12328,translocation channel protein TIM22,GO:0045039,biogenesis,import_TIM22,False,carrier translocase channel
+TIM54,YJL054W,P47045,Tim22-complex subunit TIM54,GO:0045039,biogenesis,import_TIM22,False,TIM22 subunit
+TIM18,YOR297C,Q08749,Tim18p,GO:0045039,biogenesis,import_TIM22,False,TIM22 subunit
+MIA40,YKL195W,P36046,Mia40p,GO:0045041;GO:0160203,biogenesis,import_MIA,False,MIA disulfide-relay oxidoreductase
+ERV1,YGR029W,P27882,flavin-linked sulfhydryl oxidase,GO:0045041;GO:0160203,biogenesis,import_MIA,False,MIA sulfhydryl oxidase
+MIC60,YKR016W,P36112,Mic60p,GO:0042407;GO:0044284;GO:0061617,biogenesis,cristae_MICOS,False,MICOS core (Fcj1); cristae junctions
+MIC19,YFR011C,P43594,Mic19p,GO:0042407;GO:0044284;GO:0061617,biogenesis,cristae_MICOS,False,MICOS subunit (Aim13)
+MIC12,YBR262C,P38341,Mic12p,GO:0042407;GO:0044284;GO:0061617,biogenesis,cristae_MICOS,False,MICOS subunit (Aim5/Mcs12)
+MIC27,YNL100W,P50945,Mic27p,GO:0042407;GO:0044284;GO:0061617,biogenesis,cristae_MICOS,False,MICOS subunit (Aim37)
+MIC26,YGR235C,P50087,Mic26p,GO:0042407;GO:0044284;GO:0061617,biogenesis,cristae_MICOS,False,MICOS subunit (Mcs29?)
+MIC10,YCL057C-A,Q96VH5,Mic10p,GO:0042407;GO:0044284;GO:0061617,biogenesis,cristae_MICOS,False,MICOS core membrane-bender (Mos1/Mcs10)
+FZO1,YBR179C,P38297,mitofusin,GO:0008053,biogenesis,fusion,False,outer-membrane fusion GTPase (mitofusin)
+MGM1,YOR211C,P32266,dynamin-related GTPase MGM1,GO:0007005;GO:0008053;GO:0042407,biogenesis,fusion,False,inner-membrane fusion dynamin (OPA1 ortholog)
+UGO1,YDR470C,Q03327,mitofusin complex protein UGO1,GO:0008053,biogenesis,fusion,False,fusion adaptor linking Fzo1/Mgm1
+DNM1,YLL001W,P54861,dynamin-related GTPase DNM1,GO:0000266;GO:0000423;GO:0007005,biogenesis,fission,False,fission dynamin; SHARED with peroxisome division
+FIS1,YIL065C,P40515,Fis1p,GO:0000266,biogenesis,fission,False,fission receptor; SHARED with peroxisome division
+MDV1,YJL112W,P47025,Mdv1p,GO:0000266,biogenesis,fission,False,fission adaptor (mito-specific)
+CAF4,YKR036C,P36130,Caf4p,GO:0000266,biogenesis,fission,False,fission adaptor paralog (mito-specific)

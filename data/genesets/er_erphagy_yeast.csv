@@ -1,0 +1,11 @@
+symbol,resolved_systematic_id,uniprot_id,gene_name,source_go_terms,module,submodule,shared_with_bulk_autophagy,notes
+ATG39,YLR312C,Q06159,Atg39p,GO:0005789;GO:0061709,degradation,receptor_selective,False,ER-phagy receptor: perinuclear/nuclear-ER (Mochida 2015 Nature PMID 26040717); GENUINE selective receptor; GO:0061709
+ATG40,YOR152C,Q99325,Atg40p,GO:0005789;GO:0061709,degradation,receptor_selective,False,ER-phagy receptor: cortical/cytoplasmic ER (Mochida 2015 Nature PMID 26040717); GENUINE selective receptor; GO:0061709
+ATG11,YPR049C,Q12527,autophagy protein ATG11,GO:0000045;GO:0006914;GO:0034727;GO:0061709,degradation,scaffold,True,selective-autophagy scaffold; shared across selective autophagy pathways
+ATG1,YGL180W,P53104,serine/threonine protein kinase ATG1,GO:0000045;GO:0006914;GO:0016236;GO:0034727;GO:0061709,degradation,core_autophagy_shared,True,core autophagy machinery; shared with bulk macroautophagy
+ATG13,YPR185W,Q06628,serine/threonine protein kinase regulatory subunit ATG13,GO:0000045;GO:0006914;GO:0016236;GO:0034727,degradation,core_autophagy_shared,True,core autophagy machinery; shared with bulk macroautophagy
+ATG8,YBL078C,P38182,ubiquitin-like protein ATG8,GO:0000045;GO:0006914;GO:0034727;GO:0061709,degradation,core_autophagy_shared,True,core autophagy machinery; shared with bulk macroautophagy
+ATG9,YDL149W,Q12142,autophagy protein ATG9,GO:0000045;GO:0005789;GO:0006914;GO:0034727;GO:0061709,degradation,core_autophagy_shared,True,core autophagy machinery; shared with bulk macroautophagy
+ATG7,YHR171W,P38862,Atg7p,GO:0000045;GO:0006914;GO:0016236;GO:0034727,degradation,core_autophagy_shared,True,core autophagy machinery; shared with bulk macroautophagy
+ATG5,YPL149W,Q12380,Atg5p,GO:0000045;GO:0006914;GO:0016236;GO:0034727,degradation,core_autophagy_shared,True,core autophagy machinery; shared with bulk macroautophagy
+ATG12,YBR217W,P38316,Atg12p,GO:0000045;GO:0006914;GO:0016236;GO:0034727,degradation,core_autophagy_shared,True,core autophagy machinery; shared with bulk macroautophagy

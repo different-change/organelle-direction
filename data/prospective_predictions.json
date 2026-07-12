@@ -1,0 +1,88 @@
+{
+ "committed_utc": "2026-07-11T23:11:28Z",
+ "n_cancers": 9,
+ "data_loaded_at_commit": false,
+ "note": "Committed BEFORE loading any tumor expression/protein/phospho data. Only cptac.get_cancer_options() (catalog) had been called.",
+ "scoring": {
+  "primary": "Fraction of 9 cancers where protein-level mito-biogenesis MACHINERY direction (tumor vs normal, Hedges g sign) matches the predicted sign. Predicted DOWN counts as hit if g<0 AND p<0.05; a non-significant result counts as MISS for a directional prediction (conservative).",
+  "confidence_weighted": "Report hit rate separately for high-confidence (coad,gbm,pdac) vs moderate vs low-confidence predictions. The high-confidence set is the real test; low-confidence (ov,ucec) are pre-declared as most likely to miss.",
+  "specificity_prediction": "Non-trivial prediction: mito-biogenesis and ribosome-anabolism DISSOCIATE (opposite signs) in tumor. Scored as fraction of cancers where mito g<0 while ribosome g>0. A naive 'both are biogenesis' model predicts they move TOGETHER; the directional method predicts they SPLIT.",
+  "null_baseline": "A trivial 'predict DOWN everywhere' model would also score high on the primary metric \u2014 THAT IS WHY the dissociation prediction and the confidence grading are the load-bearing tests, not the raw DOWN hit rate.",
+  "falsifier": "If ov/ucec (low-confidence) come back strongly DOWN and significant while high-confidence cancers are weak, the biology rationale was wrong even if the aggregate hit rate is high."
+ },
+ "predictions": [
+  {
+   "cancer": "coad",
+   "mito_biogenesis": "down",
+   "confidence": "high",
+   "ribosome": "up",
+   "dissociation": "yes",
+   "rationale": "Normal colonocytes are exceptionally oxidative (butyrate beta-oxidation is their primary fuel). Tumor Warburg shift to glucose => large machinery drop vs a very mito-rich normal."
+  },
+  {
+   "cancer": "gbm",
+   "mito_biogenesis": "down",
+   "confidence": "high",
+   "ribosome": "up",
+   "dissociation": "yes",
+   "rationale": "Normal brain is among the most oxidative tissues; glioblastoma is strongly glycolytic (aerobic glycolysis, hypoxic niches). Tumor-vs-normal-brain => machinery down."
+  },
+  {
+   "cancer": "pdac",
+   "mito_biogenesis": "down",
+   "confidence": "high",
+   "ribosome": "up",
+   "dissociation": "yes",
+   "rationale": "Dense desmoplastic stroma, hypoxia, KRAS-driven glycolytic/glutaminolytic metabolism; poor perfusion suppresses OXPHOS machinery."
+  },
+  {
+   "cancer": "hnscc",
+   "mito_biogenesis": "down",
+   "confidence": "moderate",
+   "ribosome": "up",
+   "dissociation": "yes",
+   "rationale": "Squamous carcinoma with reverse-Warburg/glycolytic phenotype; proliferative epithelium."
+  },
+  {
+   "cancer": "lscc",
+   "mito_biogenesis": "down",
+   "confidence": "moderate",
+   "ribosome": "up",
+   "dissociation": "yes",
+   "rationale": "Lung squamous carcinoma; strongly glycolytic, SOX2/TP63 squamous program."
+  },
+  {
+   "cancer": "luad",
+   "mito_biogenesis": "down",
+   "confidence": "moderate",
+   "ribosome": "up",
+   "dissociation": "yes",
+   "rationale": "Lung adenocarcinoma; proliferative, KRAS/EGFR; net machinery decrease expected though some OXPHOS retention reported."
+  },
+  {
+   "cancer": "brca",
+   "mito_biogenesis": "down",
+   "confidence": "moderate",
+   "ribosome": "up",
+   "dissociation": "yes",
+   "rationale": "Breast carcinoma; Warburg shift on average, but subtype-heterogeneous (luminal more oxidative than basal) => moderate, not high, confidence."
+  },
+  {
+   "cancer": "ov",
+   "mito_biogenesis": "down",
+   "confidence": "low",
+   "ribosome": "up",
+   "dissociation": "uncertain",
+   "rationale": "High-grade serous ovarian; matched-normal is problematic (comparator often fallopian tube; variable tumor purity) => low confidence, direction may be noisy."
+  },
+  {
+   "cancer": "ucec",
+   "mito_biogenesis": "down",
+   "confidence": "low",
+   "ribosome": "up",
+   "dissociation": "uncertain",
+   "rationale": "Endometrial carcinoma; PTEN/PI3K driven; a subset is reported OXPHOS-high, and normal endometrium is only moderately oxidative => weakest/most-uncertain prediction, flagged as the one most likely to miss."
+  }
+ ],
+ "sha256": "eabe1fe54f6df5d0b88f1abc8a17bed360a9a726198ae60f1203fe9b12dc321f"
+}
