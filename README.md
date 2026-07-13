@@ -47,7 +47,7 @@ lineage-robust, correctly-signed** signal, not a high-accuracy point predictor.
 
 ---
 
-## The part most teams skip — the method refereed its own science
+## Factchecks and provenance
 
 Every headline here survived an adversarial check, and we report the ones that didn't:
 
@@ -105,6 +105,4 @@ CPTAC ccRCC (RNA, protein, phosphoproteome) · MoTrPAC · GEO series (accessions
 ## How Claude Science was used
 
 The entire pipeline — gene-set curation, scoring, every confound control, all figures, both reports, and the
-adversarial self-refereeing above — was built in Claude Science with a scientist in the loop. The
-differentiator is not the pipeline; it is that the AI was directed to try to disprove its own results, and
-reported the nulls it found.
+adversarial self-refereeing above — was built in Claude Science with a scientist in the loop.
