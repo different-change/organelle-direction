@@ -27,7 +27,55 @@ import os
 import pandas as pd
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
-_GS = os.path.join(_HERE, "genesets")
+
+
+def _find_genesets():
+    """Locate the gene-set directory.
+
+    Ships at <repo>/data/genesets; also supported is a scorer-local genesets/
+    copy, so the kit works both inside this repo and when the scorer folder is
+    vendored somewhere else on its own.
+    """
+    candidates = [
+        os.path.join(_HERE, "genesets"),
+        os.path.join(_HERE, os.pardir, "data", "genesets"),
+        os.path.join(os.getcwd(), "data", "genesets"),
+    ]
+    for c in candidates:
+        if os.path.isdir(c):
+            return os.path.abspath(c)
+    raise FileNotFoundError(
+        "Could not find the gene-set directory. Looked in:\n  "
+        + "\n  ".join(os.path.abspath(c) for c in candidates)
+        + "\nSet ORGANELLE_GENESETS to point at it."
+    )
+
+
+_GS = os.environ.get("ORGANELLE_GENESETS") or _find_genesets()
+
+# tolerate the common spellings people actually type on the command line
+_ORGANELLE_ALIASES = {
+    "mitochondria": "mitochondrion",
+    "mito": "mitochondrion",
+    "mitochondrial": "mitochondrion",
+    "peroxisomes": "peroxisome",
+    "lysosomes": "lysosome",
+    "chloroplasts": "chloroplast",
+    "lipid-droplet": "lipid_droplet",
+    "lipid droplet": "lipid_droplet",
+    "ld": "lipid_droplet",
+    "endoplasmic_reticulum": "er",
+}
+_SPECIES_ALIASES = {
+    "arabidopsis_thaliana": "arabidopsis",
+    "at": "arabidopsis",
+    "hsapiens": "human",
+    "homo_sapiens": "human",
+    "scerevisiae": "yeast",
+    "saccharomyces_cerevisiae": "yeast",
+    "osativa": "rice",
+    "oryza_sativa": "rice",
+}
 
 # keyed by (organelle, species) -> (biogenesis_csv, degradation_csv)
 _FILES = {
@@ -73,6 +121,8 @@ def load_module(species, organelle="peroxisome", id_col="resolved_systematic_id"
     a lower-confidence, bulk-autophagy-confounded clearance arm there. It is
     non-empty for mitochondrion+yeast (Atg32 is a genuine mitophagy receptor).
     """
+    organelle = _ORGANELLE_ALIASES.get(str(organelle).lower(), str(organelle).lower())
+    species = _SPECIES_ALIASES.get(str(species).lower(), str(species).lower())
     key = (organelle, species)
     if key not in _FILES:
         raise ValueError(f"(organelle, species) must be one of {list(_FILES)}")
@@ -90,8 +140,69 @@ def load_module(species, organelle="peroxisome", id_col="resolved_systematic_id"
     return bio_ids, deg_ids, sel
 
 
-if __name__ == "__main__":
-    # tiny self-check: modules load; note where the selective arm is populated
+def _self_check():
+    """Load every shipped module; show where the selective-clearance arm exists."""
+    print(f"gene sets: {_GS}\n")
+    print(f"{'organelle':14s}{'species':12s}{'biogenesis':>11s}{'degradation':>13s}{'selective':>11s}")
+    print("-" * 61)
     for organelle, species in _FILES:
         b, d, s = load_module(species, organelle)
-        print(f"{organelle:13s} {species:11s} biogenesis={len(b):3d}  degradation={len(d):3d}  selective={len(s):2d}")
+        print(f"{organelle:14s}{species:12s}{len(b):>11d}{len(d):>13d}{len(s):>11d}")
+    print("\nA populated 'selective' column means a genuine selective-autophagy receptor")
+    print("exists in that species; 0 means none is known — empty by construction, not a bug.")
+
+
+def main(argv=None):
+    import argparse
+
+    combos = ", ".join(f"{o}/{s}" for o, s in _FILES)
+    ap = argparse.ArgumentParser(
+        prog="run_dynamics.py",
+        description="Score directional organelle dynamics (biogenesis - clearance) "
+                    "for every sample in an expression matrix.",
+        epilog=f"available organelle/species combinations: {combos}",
+    )
+    ap.add_argument("--expression", "-e", metavar="CSV",
+                    help="genes x samples matrix; first column = gene IDs in the module namespace")
+    ap.add_argument("--organelle", default="peroxisome", help="default: peroxisome")
+    ap.add_argument("--organism", "--species", dest="organism", default="yeast",
+                    help="default: yeast")
+    ap.add_argument("--out", "-o", metavar="CSV", help="write the score table here (default: stdout)")
+    ap.add_argument("--method", choices=["rank", "zscore"], default="rank",
+                    help="rank (default, works on a single sample) or zscore (needs >=2 samples)")
+    ap.add_argument("--n-perm", type=int, default=1000,
+                    help="permutations for the empirical null; 0 disables it (default: 1000)")
+    ap.add_argument("--self-check", action="store_true",
+                    help="load every shipped gene module and print its size, then exit")
+    args = ap.parse_args(argv)
+
+    if args.self_check or not args.expression:
+        _self_check()
+        if not args.self_check:
+            print("\nNo --expression given. Pass a matrix to score one, e.g.:")
+            print("  python run_dynamics.py --expression matrix.csv "
+                  "--organelle mitochondrion --organism human")
+        return 0
+
+    from score_organelle_dynamics import score_organelle_dynamics
+
+    bio, deg, deg_sel = load_module(args.organism, args.organelle)
+    expr = pd.read_csv(args.expression, index_col=0)
+    scores = score_organelle_dynamics(
+        expr, bio, deg,
+        degradation_selective_ids=deg_sel,
+        method=args.method,
+        n_perm=args.n_perm,
+    )
+    if args.out:
+        scores.to_csv(args.out)
+        print(f"wrote {len(scores)} sample scores to {args.out}")
+    else:
+        cols = ["biogenesis_score", "degradation_score", "net_direction",
+                "biogenesis_emp_p", "degradation_emp_p"]
+        print(scores[cols].round(4).to_string())
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

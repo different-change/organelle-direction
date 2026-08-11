@@ -1,0 +1,59 @@
+cff-version: 1.2.0
+title: >-
+  Organelle Direction: a signed readout of organelle dynamics from
+  gene expression
+message: >-
+  If you use this software, the gene modules, or the results, please
+  cite it using these metadata.
+type: software
+authors:
+  - given-names: Taras
+    family-names: Nazarov
+    affiliation: >-
+      Institute of Biological Chemistry, Washington State University
+repository-code: 'https://github.com/different-change/organelle-direction'
+abstract: >-
+  Two cells can hold the same amount of an organelle for opposite
+  reasons: one is building it, the other has blocked its clearance. A
+  conventional single-axis organelle signature cannot separate those
+  states, because build-up and tear-down move many of the same genes.
+  This work scores the two opposing programs independently and
+  subtracts them, giving one signed net_direction per sample from
+  ordinary expression, proteomic or phosphoproteomic data. Across 1,066
+  DepMap cancer cell lines the score predicts CRISPR mitochondrial
+  dependency (rho = -0.35, p = 1.7e-32), survives burden and lineage
+  controls, ranks mitochondria-targeting drugs to the top of a
+  1,514-compound library without supervision, and beats raw expression
+  on the same endpoint (AUROC 0.666 vs 0.613). Sixteen curated,
+  provenance-tracked gene modules span seven organelles in yeast,
+  Arabidopsis, rice and human. Nine directional predictions were
+  pre-registered and hash-locked before the data were examined.
+keywords:
+  - organelle dynamics
+  - selective autophagy
+  - mitophagy
+  - gene expression signature
+  - DepMap
+  - cancer dependency
+  - organellomics
+  - reproducible research
+license: MIT
+date-released: '2026-07-13'
+references:
+  - type: article
+    title: Organellomic gradients in the fourth dimension
+    authors:
+      - family-names: Hickey
+        given-names: Kathleen
+      - family-names: Nazarov
+        given-names: Taras
+      - family-names: Smertenko
+        given-names: Andrei
+    journal: Plant Physiology
+    year: 2023
+    volume: '193'
+    issue: '1'
+    start: '98'
+    end: '111'
+    notes: >-
+      The organellomics framework this method operationalises.

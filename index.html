@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Organelle Direction — a signed readout of organelle dynamics</title>
+<meta name="description" content="Read whether a cell is building organelles up or tearing them down, from ordinary gene expression. Direction predicts mitochondrial drug and genetic vulnerability in cancer.">
+<meta property="og:title" content="Organelle Direction">
+<meta property="og:description" content="Two cells can hold the same amount of an organelle for opposite reasons. Direction tells them apart — and predicts which cancers are addicted to their mitochondria.">
+<meta property="og:type" content="website">
+<style>
+  :root{
+    --bg:#fbfaf8; --panel:#ffffff; --ink:#16181d; --muted:#5c626e; --line:#e4e2dd;
+    --build:#0f766e; --clear:#b45309; --accent:#0f766e; --shadow:0 1px 2px rgba(16,18,22,.06),0 8px 24px rgba(16,18,22,.05);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0d0f13; --panel:#14171d; --ink:#eceef2; --muted:#9aa2b1; --line:#242932;
+      --build:#5eead4; --clear:#fbbf24; --accent:#5eead4; --shadow:0 1px 2px rgba(0,0,0,.5),0 8px 28px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0d0f13; --panel:#14171d; --ink:#eceef2; --muted:#9aa2b1; --line:#242932;
+    --build:#5eead4; --clear:#fbbf24; --accent:#5eead4; --shadow:0 1px 2px rgba(0,0,0,.5),0 8px 28px rgba(0,0,0,.35);
+  }
+  :root[data-theme="light"]{
+    --bg:#fbfaf8; --panel:#ffffff; --ink:#16181d; --muted:#5c626e; --line:#e4e2dd;
+    --build:#0f766e; --clear:#b45309; --accent:#0f766e; --shadow:0 1px 2px rgba(16,18,22,.06),0 8px 24px rgba(16,18,22,.05);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--ink);
+    font:16px/1.62 ui-sans-serif,-apple-system,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:0 20px}
+  a{color:var(--accent)}
+
+  header{padding:72px 0 34px;border-bottom:1px solid var(--line)}
+  .eyebrow{
+    font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+    font-weight:600;margin:0 0 18px
+  }
+  h1{
+    font-size:clamp(34px,6.2vw,58px);line-height:1.06;letter-spacing:-.025em;
+    margin:0 0 20px;font-weight:680
+  }
+  h1 .b{color:var(--build)} h1 .c{color:var(--clear)}
+  .lede{font-size:clamp(17px,2.3vw,20px);color:var(--muted);margin:0;max-width:60ch}
+
+  .cta{display:flex;flex-wrap:wrap;gap:10px;margin:30px 0 4px}
+  .btn{
+    display:inline-block;padding:11px 17px;border-radius:9px;text-decoration:none;
+    font-weight:600;font-size:14.5px;border:1px solid var(--line);
+    background:var(--panel);color:var(--ink);box-shadow:var(--shadow);
+    transition:transform .12s ease
+  }
+  .btn:hover{transform:translateY(-1px)}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+
+  section{padding:48px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:13px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin:0 0 20px;font-weight:660}
+  p{margin:0 0 16px;max-width:68ch}
+
+  .eq{
+    display:block;margin:22px 0;padding:20px;border-radius:12px;
+    background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);
+    font:600 clamp(15px,2.5vw,19px)/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    text-align:center;overflow-x:auto
+  }
+  .eq .b{color:var(--build)} .eq .c{color:var(--clear)}
+
+  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px;margin-top:6px}
+  .tile{padding:20px;border-radius:12px;background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow)}
+  .tile .n{font-size:29px;font-weight:700;letter-spacing:-.02em;line-height:1.15;color:var(--build)}
+  .tile .l{font-size:14px;color:var(--ink);margin-top:7px;font-weight:600}
+  .tile .s{font-size:12.5px;color:var(--muted);margin-top:5px;line-height:1.45}
+
+  figure{margin:26px 0 0}
+  figure img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block}
+  figcaption{font-size:13px;color:var(--muted);margin-top:10px}
+
+  .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:520px}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:640}
+  td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+  ul{margin:0;padding-left:20px;max-width:68ch}
+  li{margin-bottom:11px}
+  li b{font-weight:640}
+
+  pre{
+    background:var(--panel);border:1px solid var(--line);border-radius:10px;
+    padding:15px;overflow-x:auto;font:13.5px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    box-shadow:var(--shadow)
+  }
+  footer{padding:38px 0 64px;color:var(--muted);font-size:14px}
+  footer a{color:var(--muted)}
+  .note{font-size:13.5px;color:var(--muted);font-style:italic}
+
+  /* ---- animated hero ---------------------------------------------------- */
+  .stage{padding:40px 0 8px}
+  .stage svg{width:100%;height:auto;display:block}
+  .cell{fill:none;stroke:var(--line);stroke-width:2}
+  .mito{fill:var(--muted);opacity:.42}
+  .lab{fill:var(--ink);font:600 17px ui-sans-serif,-apple-system,"Segoe UI",sans-serif}
+  .sub{fill:var(--muted);font:13px ui-sans-serif,-apple-system,"Segoe UI",sans-serif}
+  .bar-t{fill:var(--build)} .bar-c{fill:var(--clear)}
+  .v-build{fill:var(--build);font:700 19px ui-sans-serif,-apple-system,"Segoe UI",sans-serif}
+  .v-clear{fill:var(--clear);font:700 19px ui-sans-serif,-apple-system,"Segoe UI",sans-serif}
+  .track{fill:var(--line);opacity:.5}
+
+  .b1{animation:b1 13s infinite}
+  .b2{animation:b2 13s infinite}
+  .b3{animation:b3 13s infinite}
+  .grow{animation:grow 13s infinite;transform-box:fill-box;transform-origin:left center}
+  .fluxdot{animation:flux 2.6s linear infinite}
+
+  @keyframes b1{0%{opacity:0}4%{opacity:1}28%{opacity:1}34%{opacity:.2}100%{opacity:.2}}
+  @keyframes b2{0%,30%{opacity:0}38%{opacity:1}100%{opacity:1}}
+  @keyframes b3{0%,62%{opacity:0}69%{opacity:1}100%{opacity:1}}
+  @keyframes grow{0%,31%{transform:scaleX(0)}46%{transform:scaleX(1)}100%{transform:scaleX(1)}}
+  @keyframes flux{0%{opacity:0}18%{opacity:1}72%{opacity:1}100%{opacity:0;transform:translateY(var(--dy,-46px))}}
+
+  @media (prefers-reduced-motion: reduce){
+    .b1,.b2,.b3,.grow,.fluxdot{animation:none}
+    .b1{opacity:.2} .b2,.b3{opacity:1} .grow{transform:none} .fluxdot{opacity:0}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="eyebrow">Built with Claude · Life Sciences · Research track</p>
+    <h1>Same amount.<br><span class="b">Opposite</span> <span class="c">fate</span>.</h1>
+    <p class="lede">
+      Two cells can hold the same number of mitochondria for opposite reasons — one is building them,
+      the other has stopped clearing them. Count how many are there and they look identical.
+      Read the <em>direction</em> instead, and you can predict which cancers are addicted to their
+      mitochondria and which drugs will hit them.
+    </p>
+    <div class="cta">
+      <a class="btn primary" href="demo/index.html">Open the interactive demo →</a>
+      <a class="btn" href="report/report.html">Read the report</a>
+      <a class="btn" href="https://github.com/different-change/organelle-direction">Source &amp; data</a>
+    </div>
+  </div>
+</header>
+
+<div class="stage">
+  <div class="wrap">
+    <svg viewBox="0 0 900 400" role="img" aria-labelledby="animTitle animDesc">
+      <title id="animTitle">Two cells holding the same number of mitochondria for opposite reasons</title>
+      <desc id="animDesc">Two identical cells each contain nine mitochondria. Despite the identical count,
+        the first cell's biogenesis machinery is dominant while the second cell's selective-clearance
+        machinery is dominant, giving them opposite net directions: building versus clearing.</desc>
+
+      <text class="lab" x="250" y="28" text-anchor="middle">Cell A</text>
+      <text class="lab" x="650" y="28" text-anchor="middle">Cell B</text>
+
+      <rect class="cell" x="100" y="48" width="300" height="180" rx="26"/>
+      <rect class="cell" x="500" y="48" width="300" height="180" rx="26"/>
+
+      <g class="mito">
+        <ellipse cx="160" cy="88"  rx="24" ry="12"/><ellipse cx="250" cy="88"  rx="24" ry="12"/><ellipse cx="340" cy="88"  rx="24" ry="12"/>
+        <ellipse cx="160" cy="138" rx="24" ry="12"/><ellipse cx="250" cy="138" rx="24" ry="12"/><ellipse cx="340" cy="138" rx="24" ry="12"/>
+        <ellipse cx="160" cy="188" rx="24" ry="12"/><ellipse cx="250" cy="188" rx="24" ry="12"/><ellipse cx="340" cy="188" rx="24" ry="12"/>
+        <ellipse cx="560" cy="88"  rx="24" ry="12"/><ellipse cx="650" cy="88"  rx="24" ry="12"/><ellipse cx="740" cy="88"  rx="24" ry="12"/>
+        <ellipse cx="560" cy="138" rx="24" ry="12"/><ellipse cx="650" cy="138" rx="24" ry="12"/><ellipse cx="740" cy="138" rx="24" ry="12"/>
+        <ellipse cx="560" cy="188" rx="24" ry="12"/><ellipse cx="650" cy="188" rx="24" ry="12"/><ellipse cx="740" cy="188" rx="24" ry="12"/>
+      </g>
+
+      <g class="b2">
+        <circle class="fluxdot" cx="200" cy="205" r="5" fill="var(--build)" style="--dy:-52px"/>
+        <circle class="fluxdot" cx="268" cy="208" r="5" fill="var(--build)" style="--dy:-58px;animation-delay:.9s"/>
+        <circle class="fluxdot" cx="330" cy="203" r="5" fill="var(--build)" style="--dy:-48px;animation-delay:1.7s"/>
+        <circle class="fluxdot" cx="600" cy="152" r="5" fill="var(--clear)" style="--dy:56px;animation-delay:.4s"/>
+        <circle class="fluxdot" cx="668" cy="146" r="5" fill="var(--clear)" style="--dy:62px;animation-delay:1.2s"/>
+        <circle class="fluxdot" cx="730" cy="156" r="5" fill="var(--clear)" style="--dy:50px;animation-delay:2.1s"/>
+      </g>
+
+      <text class="sub b1" x="250" y="256" text-anchor="middle">9 mitochondria</text>
+      <text class="sub b1" x="650" y="256" text-anchor="middle">9 mitochondria</text>
+
+      <g class="b2">
+        <text class="sub" x="196" y="295" text-anchor="end">biogenesis</text>
+        <text class="sub" x="196" y="321" text-anchor="end">clearance</text>
+        <text class="sub" x="596" y="295" text-anchor="end">biogenesis</text>
+        <text class="sub" x="596" y="321" text-anchor="end">clearance</text>
+
+        <rect class="track" x="206" y="283" width="190" height="10" rx="5"/>
+        <rect class="track" x="206" y="309" width="190" height="10" rx="5"/>
+        <rect class="track" x="606" y="283" width="190" height="10" rx="5"/>
+        <rect class="track" x="606" y="309" width="190" height="10" rx="5"/>
+
+        <rect class="bar-t grow" x="206" y="283" width="171" height="10" rx="5"/>
+        <rect class="bar-c grow" x="206" y="309" width="57"  height="10" rx="5" style="animation-delay:.15s"/>
+        <rect class="bar-t grow" x="606" y="283" width="62"  height="10" rx="5" style="animation-delay:.3s"/>
+        <rect class="bar-c grow" x="606" y="309" width="178" height="10" rx="5" style="animation-delay:.45s"/>
+      </g>
+
+      <g class="b3">
+        <text class="v-build" x="250" y="372" text-anchor="middle">net direction &#43; building</text>
+        <text class="v-clear" x="650" y="372" text-anchor="middle">net direction &minus; clearing</text>
+      </g>
+    </svg>
+    <p class="note" style="text-align:center;margin:14px auto 0;max-width:64ch">
+      Identical counts, opposite states. The count is what a conventional signature reports;
+      the direction is what the cell is actually doing — and in 1,066 cancer cell lines it is
+      Cell A, the one still building, that dies when you switch its mitochondrial machinery off.
+    </p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>The one idea</h2>
+    <p>
+      A standard organelle signature answers “how much is there.” But build-up and tear-down move many of the
+      same genes, so a single-axis score cannot tell a cell that is proliferating mitochondria from one whose
+      disposal machinery has stalled — and the genes that <em>would</em> separate them, the selective-autophagy
+      receptors, are usually not in the signature at all.
+    </p>
+    <p>So we score the two opposing programs separately and subtract them:</p>
+    <div class="eq"><span class="b">biogenesis</span> &minus; <span class="c">selective degradation</span> = net direction</div>
+    <p>
+      One signed number per sample, from an ordinary transcriptome, proteome, or phosphoproteome.
+      Positive means net building; negative means net clearing. It is a <b>set-point</b> — which program
+      dominates right now — validated against timecourses where the true direction is known.
+      It is not an organelle headcount and not a measured rate.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What direction buys you</h2>
+    <div class="tiles">
+      <div class="tile">
+        <div class="n">&rho; = &minus;0.35</div>
+        <div class="l">Predicts genetic vulnerability</div>
+        <div class="s">1,066 cancer cell lines, DepMap CRISPR. p = 1.7&times;10<sup>&minus;32</sup>; negative in 17 of 18 lineages.</div>
+      </div>
+      <div class="tile">
+        <div class="n">#1 of 1,514</div>
+        <div class="l">Picks the drug, unsupervised</div>
+        <div class="s">MitoQ ranks first across the PRISM library; IACS-010759, in clinical trials, lands in the top 3%.</div>
+      </div>
+      <div class="tile">
+        <div class="n">0.666 vs 0.613</div>
+        <div class="l">Direction beats amount</div>
+        <div class="s">AUROC on the same vulnerability endpoint — signed direction against raw expression.</div>
+      </div>
+    </div>
+    <figure>
+      <img src="figures/depmap_dependency.png" alt="Scatter of net direction against CRISPR gene-effect across 1,066 DepMap cancer cell lines, with lineage and burden controls.">
+      <figcaption>The more a cell line is building mitochondria, the harder it dies when you switch that machinery off. Nothing about drug or gene function was given to the score.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Where it holds, and where it doesn't</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Claim</th><th>Result</th><th>Data</th></tr></thead>
+        <tbody>
+          <tr><td>Direction &rarr; genetic vulnerability</td><td class="num">&rho; = &minus;0.35, n = 1,066</td><td>DepMap CRISPR</td></tr>
+          <tr><td>&#8627; survives dependency-burden control</td><td class="num">partial r = &minus;0.32</td><td></td></tr>
+          <tr><td>Direction &rarr; drug response</td><td class="num">mito-drug class MWU p = 0.017</td><td>DepMap PRISM</td></tr>
+          <tr><td>Cross-modal agreement in human tumour</td><td class="num">RNA g = &minus;1.52 · protein g = &minus;3.14</td><td>CPTAC ccRCC</td></tr>
+          <tr><td>Graded by organelle, as biology predicts</td><td class="num">mito &minus;0.35 · ER &minus;0.15 · lysosome null</td><td>DepMap</td></tr>
+          <tr><td><b>Survival in kidney cancer — reported null</b></td><td class="num">Cox p = 0.21 at 8&times; the power</td><td>TCGA-KIRC, 508 tumours</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top:16px">
+      Effect sizes are modest, as expected for a single-pathway expression score predicting a functional
+      phenotype across heterogeneous cell lines. The value is a real, specific, lineage-robust,
+      correctly-signed signal — not a high-accuracy point predictor.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Things we tried to break first</h2>
+    <ul>
+      <li><b>Reported a null at power.</b> A weak survival hint in CPTAC kidney cancer did not replicate in TCGA-KIRC at eight times the power. The flat curves are in the report; positive controls (stage HR = 1.93) confirm the pipeline works.</li>
+      <li><b>Pre-registered the predictions.</b> Nine blind directional calls were committed and SHA-256-hashed <em>before</em> the data was touched. Four hit — including a high-confidence miss locked in beforehand, which is what makes the hits credible.</li>
+      <li><b>Refuted its own headline.</b> A striking r = 0.88 organelle “coupling” was flagged as a shared-timecourse artefact and replaced with the mechanism that survived.</li>
+      <li><b>Walked back a replication claim.</b> A second drug platform looked like independent replication until the confound test showed it was mostly a general sensitivity axis. Downgraded to “weak directional consistency.”</li>
+      <li><b>Demoted its own statistic.</b> Swapped an over-generous equal-variance test for the correct Welch test, and kept the weaker, right number.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Run it on your own data</h2>
+    <pre>git clone https://github.com/different-change/organelle-direction
+cd organelle-direction/scorer
+python run_dynamics.py --self-check
+python run_dynamics.py --expression your_matrix.csv \
+    --organelle mitochondrion --organism human</pre>
+    <p>
+      Sixteen curated modules ship with it — seven organelles across yeast, <em>Arabidopsis</em>, rice and human,
+      each gene resolver-backed with provenance. The engine is organelle-agnostic: drop in a new pair of
+      gene-set CSVs and it scores that.
+    </p>
+    <p class="note">
+      The selective-clearance arm is populated wherever a genuine selective-autophagy receptor exists and empty
+      where none is known — including every plant organelle. That pattern is biology, not a defect, and the
+      tool reports it rather than hiding it.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>
+      Built end-to-end with Claude Science, on public data only, with a scientist in the loop.
+      By <a href="https://github.com/different-change">Taras Nazarov</a> for
+      <em>Built with Claude: Life Sciences</em> (Anthropic &times; Cerebral Valley &times; Gladstone Institutes), July 2026.
+    </p>
+    <p>
+      Method grounded in the organellomics framework — Hickey, Nazarov &amp; Smertenko,
+      <a href="https://academic.oup.com/plphys/article/193/1/98/7181000"><em>Plant Physiology</em> 2023, 193:98</a>.
+      Code MIT, data and figures CC BY 4.0.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
