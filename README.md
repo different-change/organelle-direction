@@ -79,10 +79,12 @@ that is the point.
   did **not** replicate when retested at 8× the power in TCGA-KIRC (508 tumours, 168 deaths;
   Cox p = 0.21, log-rank p = 0.65). The flat survival curves are in the report; positive controls
   (stage HR = 1.93, p = 5.6×10⁻²¹) confirm the pipeline works.
-- **Pre-registered its predictions.** Nine blind directional predictions were committed and
-  SHA-256-hashed *before* the data were examined ([`data/PREREGISTRATION.md`](data/PREREGISTRATION.md)).
-  4/9 hit — including a high-confidence **miss** (COAD) locked in before data, which is what makes the
-  hits credible rather than fitted.
+- **Recorded its predictions up front.** Nine directional predictions were written down and
+  SHA-256-hashed at the start of the validation work ([`data/PREREGISTRATION.md`](data/PREREGISTRATION.md)).
+  4/9 hit — including a high-confidence **miss** (COAD) that was recorded and reported as a miss, which is
+  what makes the hits credible rather than fitted. The hash proves the prediction file was never edited
+  afterward; it cannot by itself prove ordering, since no external timestamp was anchored during the
+  hackathon. Read it as a documented commitment, not cryptographic pre-registration.
 - **Refuted its own headline.** A striking r = 0.88 organelle "coupling" was flagged as a
   shared-timecourse artefact and re-led with the mechanism that survived (TFEB-dependence).
 - **Walked back a replication claim.** A second drug platform (GDSC) looked like independent

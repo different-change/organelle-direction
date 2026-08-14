@@ -1,6 +1,6 @@
 # Pre-registration — prospective directional predictions
 
-**Committed:** 2026-07-11T23:11:28Z (before any tumor-vs-normal proteomics for these cancers was inspected)
+**Recorded:** 2026-07-11T23:11:28Z, at the start of the tumor-vs-normal validation work
 
 **SHA-256 of `prospective_predictions.csv`:**
 `eabe1fe54f6df5d0b88f1abc8a17bed360a9a726198ae60f1203fe9b12dc321f`
@@ -11,6 +11,13 @@ shasum -a 256 prospective_predictions.csv
 # must equal the hash above
 ```
 If the CSV had been edited after commit, the hash would not match. It does.
+
+**What this hash does and does not prove.** It proves the prediction file has not been edited since
+the hash was recorded. It does not, by itself, prove the predictions predate the analysis: the file
+and this claim live in the same repository, all commits sit within one hackathon working session, and
+no external timestamp (OSF, OpenTimestamps) was anchored at the time. Read this as a documented,
+verifiable commitment made during the event, not as cryptographic pre-registration. Any future
+version of this work will anchor predictions externally before analysis.
 
 ---
 

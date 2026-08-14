@@ -27,7 +27,8 @@ abstract: >-
   on the same endpoint (AUROC 0.666 vs 0.613). Sixteen curated,
   provenance-tracked gene modules span seven organelles in yeast,
   Arabidopsis, rice and human. Nine directional predictions were
-  pre-registered and hash-locked before the data were examined.
+  recorded and hash-locked at the start of the validation work and
+  reported together with their misses.
 keywords:
   - organelle dynamics
   - selective autophagy
