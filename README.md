@@ -182,8 +182,8 @@ scorer/
 data/
   genesets/                    ← 16 curated biogenesis / selective-clearance modules + provenance
   scores/                      ← the result tables behind every figure
-  prospective_predictions.*    ← the hash-locked blind predictions
-  PREREGISTRATION.md           ← human-readable pre-registration record
+  prospective_predictions.*    ← the nine hashed predictions
+  PREREGISTRATION.md           ← human-readable prediction record
 ```
 
 ---

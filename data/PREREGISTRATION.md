@@ -1,4 +1,4 @@
-# Pre-registration — prospective directional predictions
+# Predictions recorded at the start of validation
 
 **Recorded:** 2026-07-11T23:11:28Z, at the start of the tumor-vs-normal validation work
 
@@ -23,7 +23,7 @@ version of this work will anchor predictions externally before analysis.
 
 ## What was predicted, and why this design is honest
 
-Before looking at the CPTAC pan-cancer proteomics, the directional method was used to predict, for nine
+At the start of the validation work, the directional method was used to predict, for nine
 cancer types, the **sign** of the mitochondrial-machinery change (tumor vs. matched normal), each with a
 pre-declared **confidence tier** and rationale. All nine were predicted *down* (Warburg-shift logic), with
 confidence graded high / moderate / low.
@@ -31,19 +31,19 @@ confidence graded high / moderate / low.
 **Scoring rule (also pre-declared):** a prediction counts as a hit only if the tumor-vs-normal effect is
 in the predicted direction **and** significant (g<0, p<0.05). A non-significant result counts as a miss.
 
-**Result: 4/9 hits** — high-confidence 2/3, moderate 1/3 (as expected), low-confidence 0/2 (exactly as
+**Result: 4/9 hits** — high-confidence 2/3, moderate 2/4 (as expected), low-confidence 0/2 (exactly as
 pre-declared: these were flagged as the most likely to miss).
 
 The load-bearing point is **not** the raw hit rate — a single-pathway expression score is not expected to
 predict every cancer's proteome. It is that:
 
 1. The **confidence tiers were calibrated** — high beat moderate beat low, monotonically.
-2. A **high-confidence miss (COAD) was locked in before the data** and reported as a miss. That is the
-   proof the hits are not overfit: an honest pre-registration must be able to be wrong, and this one was.
+2. A **high-confidence miss (COAD) was recorded with the other predictions** and reported as a miss.
+   An honest prediction record must be able to be wrong, and this one was.
 
 See `../report/full_technical_report.html` for the per-cancer results table and the effect sizes.
 
 ## Files
 
 - `prospective_predictions.csv` — the nine locked predictions (the hashed artifact)
-- `prospective_predictions.json` — same content, structured, with the commit timestamp
+- `prospective_predictions.json` — same content, structured, with the recorded timestamp

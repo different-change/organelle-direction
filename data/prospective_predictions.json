@@ -1,8 +1,7 @@
 {
- "committed_utc": "2026-07-11T23:11:28Z",
+ "recorded_utc": "2026-07-11T23:11:28Z",
  "n_cancers": 9,
- "data_loaded_at_commit": false,
- "note": "Committed BEFORE loading any tumor expression/protein/phospho data. Only cptac.get_cancer_options() (catalog) had been called.",
+ "note": "Recorded at the start of the validation work. The file's first git commit (2026-07-12T23:50:52Z) also holds the results, so the SHA-256 hash proves the file is unchanged since then, not when it was written. See PREREGISTRATION.md.",
  "scoring": {
   "primary": "Fraction of 9 cancers where protein-level mito-biogenesis MACHINERY direction (tumor vs normal, Hedges g sign) matches the predicted sign. Predicted DOWN counts as hit if g<0 AND p<0.05; a non-significant result counts as MISS for a directional prediction (conservative).",
   "confidence_weighted": "Report hit rate separately for high-confidence (coad,gbm,pdac) vs moderate vs low-confidence predictions. The high-confidence set is the real test; low-confidence (ov,ucec) are pre-declared as most likely to miss.",
